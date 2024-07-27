@@ -5,14 +5,14 @@ import Contact from "./page/Contact";
 import Home from "./page/Home";
 import Projects from "./page/Projects";
 import Services from "./page/Services";
-import "./assets/font/PolySans-Median.woff2";
+import "/assets/font/PolySans-Median.woff2";
 import Header from "./components/Header";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div
-        className="w-full h-full min-h-screen flex flex-col bg-[#fefaf6] text-[#16191E] font-polySans"
+        className="w-full h-full min-h-screen flex flex-col bg-[#f3f6fd] text-[#16191E] font-polySans"
         style={{
           fontFamily: "PolySans",
         }}

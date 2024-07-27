@@ -246,7 +246,7 @@ const Header = () => {
               <Link to={"/"}>
                 <img
                   src="../assets/Logo.png"
-                  className="mx-auto h-full w-full rounded-md object-cover"
+                  className="mx-auto h-6 w-auto object-cover"
                   alt="mediaPro"
                 />
               </Link>
@@ -288,8 +288,16 @@ const Header = () => {
           className="backdrop-blur-xl"
         >
           <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
-            <SheetDescription>Choose an option below:</SheetDescription>
+            <SheetTitle>
+              {" "}
+              <Link to={"/"}>
+                <img
+                  src="../assets/Logo.png"
+                  className="mx-auto h-6 w-auto object-cover"
+                  alt="mediaPro"
+                />
+              </Link>
+            </SheetTitle>
           </SheetHeader>
           <div className="flex  flex-col h-full ">
             <div className="flex-1 h-full mt-6">

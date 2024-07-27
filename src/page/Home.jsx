@@ -1,70 +1,21 @@
-import React from "react";
 import {
   ArrowRight,
   ArrowRightIcon,
-  Check,
   CheckCircle,
-  CheckIcon,
-  Clock7,
-  icons,
   PlayCircle,
 } from "lucide-react";
-import AvatarCircles from "../components/Avatar";
-import Button from "../components/Button";
-import { P } from "../components/typographypara";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { H3 } from "../components/typographyh3";
+import React from "react";
+import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { BiBulb } from "react-icons/bi";
+import AvatarCircles from "../components/Avatar";
 import Badge from "../components/Badge";
-import { H2 } from "../components/typographyh2";
+import Button from "../components/Button";
+import MaxWidthWrapper from "../components/MaxWidthWrapper";
 import { H1 } from "../components/typographyh1";
-import { H4 } from "../components/typographyh4";
-
-const aboutFeature = [
-  {
-    title: "About Us",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu    ",
-  },
-  {
-    title: "Our Team",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu    ",
-    highlight: true,
-  },
-  {
-    title: "Our Values",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu    ",
-  },
-];
-
-const features = [
-  {
-    title: "Why Choose Us",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
-  },
-  {
-    title: "Save Your Time",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
-    icon: <Clock7 size={48} className="text-[#ff6400] " />,
-  },
-  {
-    title: "Affordable Price For You",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
-    highlight: true,
-  },
-  {
-    title: "Best Strategy",
-    description:
-      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
-    icon: <BiBulb size={48} className="text-[#ff6400]" />,
-  },
-];
+import { H2 } from "../components/typographyh2";
+import { H3 } from "../components/typographyh3";
+import { P } from "../components/typographypara";
+import { aboutFeatures, features, serviceFeatures } from "../config";
 
 const Feature = ({ title, description, icon, highlight }) => {
   return (
@@ -97,14 +48,7 @@ const Home = () => {
       <MaxWidthWrapper>
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <Badge
-              icon={
-                <ArrowRightIcon
-                  className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
-                  size={16}
-                />
-              }
-            >
+            <Badge className="inline-block uppercase tracking-wide">
               Welcome To Socialzy
             </Badge>
             <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
@@ -119,7 +63,7 @@ const Home = () => {
               presence.
             </P>
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <div className="flex flex-row items-center justify-center gap-4 my-auto mx-auto">
+              <div className="flex flex-row items-center justify-center lg:justify-start gap-4 my-auto mx-auto">
                 <Button
                   bg
                   href="/get-started"
@@ -187,9 +131,9 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper>
-        <div className="container grid items-center gap-x-12 place-items-center px-4 md:px-6 lg:grid-cols-2 ">
-          <div className="h-full w-full flex items-center justify-center">
+      <MaxWidthWrapper className="pt-10">
+        <div className="grid grid-flow-dense items-center gap-x-12 place-items-center lg:grid-cols-2 pb-8">
+          <div className="h-full  w-full flex items-center justify-center">
             <img
               src="https://images.unsplash.com/photo-1720451815682-3353b81a6633?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Feature"
@@ -197,8 +141,10 @@ const Home = () => {
             />
           </div>
           <div className="space-y-4">
-            <Badge className="inline-block">Features</Badge>
-            <H1 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            <Badge className="inline-block uppercase tracking-wide">
+              About Socialzy
+            </Badge>
+            <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Unlock Your Team's Potential
             </H1>
             <P className=" text-muted-foreground md:text-xl text-balance">
@@ -207,7 +153,7 @@ const Home = () => {
               presence.
             </P>
             <div className="pt-5 space-y-6">
-              {aboutFeature.map((feature, index) =>
+              {aboutFeatures.map((feature, index) =>
                 feature.highlight === true ? (
                   <div
                     key={index}
@@ -243,20 +189,143 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="w-full mx-auto ">
-        <div className="container w-full mx-auto gap-x-12  px-4 md:px-6 lg:grid-cols-2 ">
-          <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
-            <Badge className="inline-block">Features</Badge>
-            <H1 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Unlock Your Team's Potential
-            </H1>
-            <P className=" text-muted-foreground md:text-xl text-balance">
-              Empower your team to build and deploy faster with our cutting-edge
-              platform. Unlock new possibilities and revolutionize your web
-              presence.
-            </P>
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-0  placeholderImage bg-[#1e193bfb] bg-blend-multiply">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
+          <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
+            <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
+              <Badge className="inline-block uppercase tracking-wide">
+                Our Services
+              </Badge>
+              <H1 className="text-zinc-100 text-3xl font-bold tracking-tight sm:text-4xl">
+                We Provide The Best Service For You
+              </H1>
+              <P className="max-w-prose text-zinc-400 md:text-xl text-balance font-thin">
+                Empower your team to build and deploy faster with our
+                cutting-edge platform. Unlock new possibilities and
+                revolutionize your web presence.
+              </P>
+            </div>
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-4 gap-y-4 pt-12">
+              <div className="min-w-[28rem] sm:min-w-0 relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 min-h-[21.25rem]">
+                <img
+                  src="./assets/likes-in-social-media.jpg"
+                  className="w-[28rem] h-[21.25rem] object-cover object-center"
+                  alt="Feature"
+                />
+                <div className="absolute inset-0 -z-10 bg-[#f6f6ff] w-1/2 group-hover:w-full transition-all duration-300 ease-in-out" />
+              </div>
+              {serviceFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 ${
+                    index % 2 === 0 ? "col-span-1" : ""
+                  } `}
+                >
+                  <div
+                    className={`absolute inset-0 -z-10 b w-1/2 group-hover:w-full transition-all duration-300 ease-in-out ${
+                      feature.color ? "bg-[#ffe0cc]" : "bg-[#f6f6ff]"
+                    } `}
+                  />
+                  <div className="flex justify-start items-center p-6 h-1/2">
+                    <div className="text-white text-4xl pl-5 translate-y-4 group-hover:translate-y-2 transition-all duration-300 ease-in-out">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <div className="p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center">
+                      <Link
+                        to={feature.href}
+                        className="flex items-center text-blue-500 hover:text-blue-700 transition-colors"
+                        aria-label="Read More"
+                      >
+                        Read More
+                        <ArrowRightIcon className="w-5 h-5 ml-2" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* </div> */}
           </div>
-        </div>
+        </MaxWidthWrapper>
+      </MaxWidthWrapper>
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-0">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
+          <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
+            <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
+              <Badge className="inline-block uppercase tracking-wide">
+                Our Pricing
+              </Badge>
+              <H1 className="text-zinc-100 text-3xl font-bold tracking-tight sm:text-4xl">
+                The Best Price Just For You
+              </H1>
+              <P className="max-w-prose text-zinc-400 md:text-xl text-balance font-thin">
+                Empower your team to build and deploy faster with our
+                cutting-edge platform. Unlock new possibilities and
+                revolutionize your web presence.
+              </P>
+            </div>
+            {/* <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-4 gap-y-4 pt-12">
+              <div className="min-w-[28rem] sm:min-w-0 relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 min-h-[21.25rem]">
+                <img
+                  src="./assets/likes-in-social-media.jpg"
+                  className="w-[28rem] h-[21.25rem] object-cover object-center"
+                  alt="Feature"
+                />
+                <div className="absolute inset-0 -z-10 bg-[#f6f6ff] w-1/2 group-hover:w-full transition-all duration-300 ease-in-out" />
+              </div>
+              {serviceFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 ${
+                    index % 2 === 0 ? "col-span-1" : ""
+                  } `}
+                >
+                  <div
+                    className={`absolute inset-0 -z-10 b w-1/2 group-hover:w-full transition-all duration-300 ease-in-out ${
+                      feature.color ? "bg-[#ffe0cc]" : "bg-[#f6f6ff]"
+                    } `}
+                  />
+                  <div className="flex justify-start items-center p-6 h-1/2">
+                    <div className="text-white text-4xl pl-5 translate-y-4 group-hover:translate-y-2 transition-all duration-300 ease-in-out">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <div className="p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center">
+                      <Link
+                        to={feature.href}
+                        className="flex items-center text-blue-500 hover:text-blue-700 transition-colors"
+                        aria-label="Read More"
+                      >
+                        Read More
+                        <ArrowRightIcon className="w-5 h-5 ml-2" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div> */}
+          </div>
+        </MaxWidthWrapper>
       </MaxWidthWrapper>
     </>
   );

@@ -20,6 +20,10 @@ export default {
         "4xl": "2rem",
         "5xl": "3rem",
       },
+      transitionDelay: {
+        0: "0ms",
+        2000: "2000ms",
+      },
     },
     fontFamily: {
       polySans: ["PolySans", "sans-serif"],

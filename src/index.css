@@ -11,7 +11,7 @@
   --tw-bg-opacity: 1;
   /* background-color: rgb(228 228 231 / var(--tw-bg-opacity)); */
 
-  background-color: #fdf9f5;
+  background-color: #f3f6fd;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,4 +44,13 @@ body {
   font-family: "PolySans";
   src: local("PolySans-Regular"),
     url('./assets/font/PolySans-Median.woff2')
+}
+
+
+.placeholderImage {
+  background-image: url('../assets/placeholder.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 80%;
 }
