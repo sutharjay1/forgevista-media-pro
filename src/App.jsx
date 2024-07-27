@@ -5,7 +5,7 @@ import Contact from "./page/Contact";
 import Home from "./page/Home";
 import Projects from "./page/Projects";
 import Services from "./page/Services";
-import "/assets/font/PolySans-Median.woff2";
+import "./assets/font/PolySans-Median.woff2";
 import Header from "./components/Header";
 
 const App = () => {
