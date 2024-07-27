@@ -377,11 +377,11 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <Card
+              {/* <Card
                 title={"Social Media Ads"}
                 description={"lorem ipsum"}
                 img={"https://picsum.photos/200/300"}
-              />
+              /> */}
             </div>
           </div>
         </MaxWidthWrapper>
