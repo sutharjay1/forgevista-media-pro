@@ -2,6 +2,7 @@ import {
   ArrowRight,
   ArrowRightIcon,
   CheckCircle,
+  CheckIcon,
   PlayCircle,
 } from "lucide-react";
 import React from "react";
@@ -16,6 +17,8 @@ import { H2 } from "../components/typographyh2";
 import { H3 } from "../components/typographyh3";
 import { P } from "../components/typographypara";
 import { aboutFeatures, features, serviceFeatures } from "../config";
+import { BsFillBuildingsFill } from "react-icons/bs";
+import { PiShoppingBagOpen, PiUserCirclePlus } from "react-icons/pi";
 
 const Feature = ({ title, description, icon, highlight }) => {
   return (
@@ -147,7 +150,7 @@ const Home = () => {
             <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Unlock Your Team's Potential
             </H1>
-            <P className=" text-muted-foreground md:text-xl text-balance">
+            <P className=" text-[#27272a]/80 md:text-xl text-balance">
               Empower your team to build and deploy faster with our cutting-edge
               platform. Unlock new possibilities and revolutionize your web
               presence.
@@ -259,71 +262,244 @@ const Home = () => {
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-0">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-24">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
               <Badge className="inline-block uppercase tracking-wide">
                 Our Pricing
               </Badge>
-              <H1 className="text-zinc-100 text-3xl font-bold tracking-tight sm:text-4xl">
+              <H1 className=" text-3xl font-bold tracking-tight sm:text-4xl">
                 The Best Price Just For You
               </H1>
-              <P className="max-w-prose text-zinc-400 md:text-xl text-balance font-thin">
+              <P className="max-w-prose text-[#27272a]/80 md:text-xl text-balance font-thin">
                 Empower your team to build and deploy faster with our
                 cutting-edge platform. Unlock new possibilities and
                 revolutionize your web presence.
               </P>
             </div>
-            {/* <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-4 gap-y-4 pt-12">
-              <div className="min-w-[28rem] sm:min-w-0 relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 min-h-[21.25rem]">
-                <img
-                  src="./assets/likes-in-social-media.jpg"
-                  className="w-[28rem] h-[21.25rem] object-cover object-center"
-                  alt="Feature"
-                />
-                <div className="absolute inset-0 -z-10 bg-[#f6f6ff] w-1/2 group-hover:w-full transition-all duration-300 ease-in-out" />
-              </div>
-              {serviceFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 ${
-                    index % 2 === 0 ? "col-span-1" : ""
-                  } `}
-                >
-                  <div
-                    className={`absolute inset-0 -z-10 b w-1/2 group-hover:w-full transition-all duration-300 ease-in-out ${
-                      feature.color ? "bg-[#ffe0cc]" : "bg-[#f6f6ff]"
-                    } `}
-                  />
-                  <div className="flex justify-start items-center p-6 h-1/2">
-                    <div className="text-white text-4xl pl-5 translate-y-4 group-hover:translate-y-2 transition-all duration-300 ease-in-out">
-                      {feature.icon}
+
+            <div className="w-full">
+              <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 sm:items-center">
+                  <div className="rounded-2xl border border-gray-600 p-6 shadow-sm sm:px-8 lg:p-12">
+                    <div className="text-center">
+                      {" "}
+                      <PiUserCirclePlus
+                        className="w-20 h-20 mx-auto mb-5 text-zinc-100 "
+                        color="#ff6400"
+                      />
+                      <h2 className="text-lg font-medium text-gray-900">
+                        Personal Plan
+                        <span className="sr-only">Plan</span>
+                      </h2>
+                      <p className="mt-2 sm:mt-4">
+                        <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                          $49,9
+                        </strong>
+
+                        {/* <span className="text-sm font-medium text-gray-700">
+                          /month
+                        </span> */}
+                      </p>
+                      <P className="-mt-2 text-sm text-[#27272a]/80 leading-wide">
+                        Billed Annually
+                      </P>
                     </div>
+
+                    <div className="w-full mt-8 flex items-center justify-center mx-auto">
+                      <Button
+                        bg
+                        href="/get-started"
+                        className={
+                          "bg-[#3d3568]  hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                        }
+                        icon={<ArrowRight size={16} />}
+                      >
+                        Get Started
+                      </Button>
+                    </div>
+
+                    <ul className="text-left mt-6 space-y-2 mx-auto">
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-[#ff6400]" />
+
+                        <span className="text-gray-700">
+                          25 Analytics Campaigns
+                        </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-[#ff6400]" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          Includes Branded Reports{" "}
+                        </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-[#ff6400]" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          300 Keywords for SEO{" "}
+                        </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-[#ff6400]" />
+
+                        <span className="text-gray-700">
+                          24/7 Customer Support
+                        </span>
+                      </li>
+                    </ul>
                   </div>
-                  <div className="p-8 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        {feature.description}
+
+                  <div className="rounded-2xl border border-indigo-600 p-6 shadow-sm ring-1 ring-indigo-600 sm:px-8 lg:p-12">
+                    <div className="text-center">
+                      <BsFillBuildingsFill
+                        className="w-20 h-20 mx-auto mb-5 text-zinc-100 "
+                        color="#ff6400"
+                      />
+                      <h2 className="text-lg font-medium text-gray-900">
+                        Pro
+                        <span className="sr-only">Plan</span>
+                      </h2>
+
+                      <p className="mt-2 sm:mt-4">
+                        <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                          {" "}
+                          30${" "}
+                        </strong>
+
+                        <span className="text-sm font-medium text-gray-700">
+                          /month
+                        </span>
                       </p>
                     </div>
-                    <div className="flex items-center">
-                      <Link
-                        to={feature.href}
-                        className="flex items-center text-blue-500 hover:text-blue-700 transition-colors"
-                        aria-label="Read More"
-                      >
-                        Read More
-                        <ArrowRightIcon className="w-5 h-5 ml-2" />
-                      </Link>
+
+                    <ul className="mt-6 space-y-2">
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          20 users included{" "}
+                        </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700"> 5GB of storage </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700"> Email support </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          Help center access{" "}
+                        </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700"> Phone support </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          Community access{" "}
+                        </span>
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#"
+                      className="mt-8 block rounded-full border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+
+                  <div className="rounded-2xl border border-gray-600 p-6 shadow-sm sm:px-8 lg:p-12">
+                    <div className="text-center">
+                      <PiShoppingBagOpen
+                        className="w-20 h-20 mx-auto mb-5 text-zinc-100 "
+                        color="#ff6400"
+                      />
+                      <h2 className="text-lg font-medium text-gray-900">
+                        Starter
+                        <span className="sr-only">Plan</span>
+                      </h2>
+
+                      <p className="mt-2 sm:mt-4">
+                        <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                          {" "}
+                          20${" "}
+                        </strong>
+
+                        <span className="text-sm font-medium text-gray-700">
+                          /month
+                        </span>
+                      </p>
                     </div>
+
+                    <ul className="mt-6 space-y-2">
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          10 users included{" "}
+                        </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700"> 2GB of storage </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700"> Email support </span>
+                      </li>
+
+                      <li className="flex items-center gap-1">
+                        <CheckIcon className="size-5 text-indigo-700" />
+
+                        <span className="text-gray-700">
+                          {" "}
+                          Help center access{" "}
+                        </span>
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#"
+                      className="mt-8 block rounded-full border border-indigo-600 bg-white px-12 py-3 text-center text-sm font-medium text-indigo-600 hover:ring-1 hover:ring-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+                    >
+                      Get Started
+                    </a>
                   </div>
                 </div>
-              ))}
-            </div> */}
+              </div>
+            </div>
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>

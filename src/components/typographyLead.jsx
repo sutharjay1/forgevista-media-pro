@@ -4,7 +4,7 @@ export function TypographyLead({ children, className }) {
   return (
     <p
       className={twMerge(
-        "text-lg text-muted-foreground tracking-normal mt-4 ml-1",
+        "text-lg text-[#27272a]/80 tracking-normal mt-4 ml-1",
         className
       )}
     >
