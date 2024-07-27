@@ -7,6 +7,7 @@ import Projects from "./page/Projects";
 import Services from "./page/Services";
 import "./assets/font/PolySans-Median.woff2";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
         <main className="flex-1 w-full">
           <AppRouter />
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </BrowserRouter>
   );

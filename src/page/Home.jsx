@@ -17,6 +17,7 @@ import MaxWidthWrapper from "../components/MaxWidthWrapper";
 import { H1 } from "../components/typographyh1";
 import { H2 } from "../components/typographyh2";
 import { H3 } from "../components/typographyh3";
+import { H4 } from "../components/typographyh4";
 import { P } from "../components/typographypara";
 import {
   aboutFeatures,
@@ -27,6 +28,9 @@ import {
   serviceFeatures,
 } from "../config";
 import NumCard from "../components/NumCard";
+import { InlineCode } from "../components/typographyInlineCode";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
+import BlogCard from "../components/BlogCard";
 
 const Feature = ({ title, description, icon, highlight }) => {
   return (
@@ -384,7 +388,7 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap- pt-8 pb-10 place-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 pt-8 pb-10 place-items-center">
               <Card
                 title={"Social Media Ads"}
                 description={
@@ -512,12 +516,12 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage  bg-[#141025] bg-blend-overlay   pb-8 ">
-        {/* <div className="absolute inset-0 bg-black opacity-25"></div> */}
-        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto ">
-          <div className="w-full ">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
-              <div className="space-y-4 flex flex-col items-center justify-center md:items-start  ">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage bg-[#141025] bg-blend-overlay pb-8">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex flex-col items-center mx-auto">
+          <div className="w-full">
+            {/* Header Section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center mb-8">
+              <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
                 <Badge className="inline-block uppercase tracking-wide">
                   Testimonials
                 </Badge>
@@ -525,15 +529,125 @@ const Home = () => {
                   What Client Says About Socialzy
                 </H1>
               </div>
-              <div className="flex  flex-col items-center justify-center space-y-10">
-                <P className="max-w-prose text-center text-zinc-400 md:text-xl text-balance font-thin pb-2">
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <P className="max-w-prose text-center text-zinc-400 md:text-xl font-thin">
                   Empower your team to build and deploy faster with our
                   cutting-edge platform. Unlock new possibilities and
                   revolutionize your web presence.
-                </P>{" "}
+                </P>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap- pt-8 pb-10 place-items-center"></div>
+
+            {/* Main Content Section */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full py-6">
+              {/* Stats Section */}
+              <div className="p-6 rounded-lg shadow-md flex flex-col items-center justify-start gap-4 col-span-1 md:col-span-1">
+                <div className="w-full flex flex-col items-center text-center space-y-4">
+                  <div className="flex flex-col items-center">
+                    <H3 className="text-2xl font-bold text-[#ff6400]">250%</H3>
+                    <P className="text-lg text-gray-600 mt-1">
+                      - Follower Growth
+                    </P>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <H3 className="text-2xl font-bold text-[#ff6400]">80%</H3>
+                    <P className="text-lg text-gray-600 mt-1">
+                      - Increase Sales
+                    </P>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <H3 className="text-2xl font-bold text-[#ff6400]">140%</H3>
+                    <P className="text-lg text-gray-600 mt-1">
+                      - Total Engagement
+                    </P>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <H3 className="text-2xl font-bold text-[#ff6400]">75%</H3>
+                    <P className="text-lg text-gray-600 mt-1">
+                      - Income Growth
+                    </P>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Section */}
+              <div className="shadow-md flex items-center justify-center order-1 md:order-2 md:col-span-1 col-span-1">
+                <img
+                  src="https://images.unsplash.com/photo-1721548902888-36f759c71727?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className="w-full h-96 object-cover rounded-3xl"
+                  alt="image"
+                />
+              </div>
+
+              {/* Testimonial Section */}
+              <div className="p-4 rounded shadow-md flex flex-col items-center justify-center order-2 md:order-3 md:col-span-1 col-span-1">
+                <H3 className="text-2xl font-bold text-center text-[#ff6400] mb-4">
+                  Fantastic Job Done by Socialzy
+                </H3>
+                <div className="max-w-lg flex items-center justify-center space-x-5">
+                  <div>
+                    <BiSolidQuoteAltRight
+                      className="text-[#ff6400] mb-4"
+                      size={96}
+                    />
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <InlineCode className="text-zinc-100">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididu ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    </InlineCode>
+                    <div className="mt-1">
+                      <H4 className="text-zinc-100">Steve Prosser</H4>
+                      <P className="text-gray-600">CEO - Mindtech</P>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-44 lg:pt-48 pb-8">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
+          <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
+            <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
+              <Badge className="inline-block uppercase tracking-wide">
+                Our Blog
+              </Badge>
+              <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Latest Blog & Articles
+              </H1>
+              <P className="max-w-prose text-[#27272a]/80 md:text-xl text-balance text-center font-thin">
+                Empower your team to build and deploy faster with our
+                cutting-edge platform. Unlock new possibilities and
+                revolutionize your web presence.
+              </P>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-12">
+            <BlogCard
+              title="Using Meta Advantage to Simplify Your Facebook Campaigns"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptates."
+              img="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              date={new Date()}
+              href="/blog"
+            />
+            <BlogCard
+              title="TikTok Storytelling: How to Stand Out From the Crowd"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptates."
+              img="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              date={new Date()}
+              href="/blog"
+            />
+            <BlogCard
+              title="3  Instagram Ads Reports That Simplify Your Marketing"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptates."
+              img="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              date={new Date()}
+              href="/blog"
+            />
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>
