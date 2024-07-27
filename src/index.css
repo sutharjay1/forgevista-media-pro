@@ -103,8 +103,7 @@ body {
 
 @font-face {
   font-family: "PolySans";
-  src: local("PolySans-Regular"),
-    url('./assets/font/PolySans-Median.woff2') format("woff2");
+  src: url('./assets/font/PolySans-Median.woff2') format("woff2");
 }
 
 
