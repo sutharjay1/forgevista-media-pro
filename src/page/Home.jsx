@@ -16,9 +16,10 @@ import { H1 } from "../components/typographyh1";
 import { H2 } from "../components/typographyh2";
 import { H3 } from "../components/typographyh3";
 import { P } from "../components/typographypara";
-import { aboutFeatures, features, serviceFeatures } from "../config";
+import { aboutFeatures, features, pricing, serviceFeatures } from "../config";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { PiShoppingBagOpen, PiUserCirclePlus } from "react-icons/pi";
+import Card from "../components/Card";
 
 const Feature = ({ title, description, icon, highlight }) => {
   return (
@@ -192,7 +193,7 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-0  placeholderImage bg-[#1e193bfb] bg-blend-multiply">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-0  placeholderImage  bg-[#1e193bfb] bg-blend-multiply">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
@@ -262,17 +263,18 @@ const Home = () => {
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-24">
+
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-32 lg:pt-24 pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
-          <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
-            <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
+          <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
+            <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
               <Badge className="inline-block uppercase tracking-wide">
                 Our Pricing
               </Badge>
-              <H1 className=" text-3xl font-bold tracking-tight sm:text-4xl">
+              <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 The Best Price Just For You
               </H1>
-              <P className="max-w-prose text-[#27272a]/80 md:text-xl text-balance font-thin">
+              <P className="max-w-prose text-[#27272a]/80 md:text-xl text-balance text-center font-thin">
                 Empower your team to build and deploy faster with our
                 cutting-edge platform. Unlock new possibilities and
                 revolutionize your web presence.
@@ -281,224 +283,105 @@ const Home = () => {
 
             <div className="w-full">
               <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-                <div className="grid grid-cols-1 sm:grid-cols-3 sm:items-center">
-                  <div className="rounded-2xl border border-gray-600 p-6 shadow-sm sm:px-8 lg:p-12">
-                    <div className="text-center">
-                      {" "}
-                      <PiUserCirclePlus
-                        className="w-20 h-20 mx-auto mb-5 text-zinc-100 "
-                        color="#ff6400"
-                      />
-                      <h2 className="text-lg font-medium text-gray-900">
-                        Personal Plan
-                        <span className="sr-only">Plan</span>
-                      </h2>
-                      <p className="mt-2 sm:mt-4">
-                        <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                          $49,9
-                        </strong>
-
-                        {/* <span className="text-sm font-medium text-gray-700">
-                          /month
-                        </span> */}
-                      </p>
-                      <P className="-mt-2 text-sm text-[#27272a]/80 leading-wide">
-                        Billed Annually
-                      </P>
-                    </div>
-
-                    <div className="w-full mt-8 flex items-center justify-center mx-auto">
-                      <Button
-                        bg
-                        href="/get-started"
-                        className={
-                          "bg-[#3d3568]  hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
-                        }
-                        icon={<ArrowRight size={16} />}
-                      >
-                        Get Started
-                      </Button>
-                    </div>
-
-                    <ul className="text-left mt-6 space-y-2 mx-auto">
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-[#ff6400]" />
-
-                        <span className="text-gray-700">
-                          25 Analytics Campaigns
-                        </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-[#ff6400]" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          Includes Branded Reports{" "}
-                        </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-[#ff6400]" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          300 Keywords for SEO{" "}
-                        </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-[#ff6400]" />
-
-                        <span className="text-gray-700">
-                          24/7 Customer Support
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="rounded-2xl border border-indigo-600 p-6 shadow-sm ring-1 ring-indigo-600 sm:px-8 lg:p-12">
-                    <div className="text-center">
-                      <BsFillBuildingsFill
-                        className="w-20 h-20 mx-auto mb-5 text-zinc-100 "
-                        color="#ff6400"
-                      />
-                      <h2 className="text-lg font-medium text-gray-900">
-                        Pro
-                        <span className="sr-only">Plan</span>
-                      </h2>
-
-                      <p className="mt-2 sm:mt-4">
-                        <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                          {" "}
-                          30${" "}
-                        </strong>
-
-                        <span className="text-sm font-medium text-gray-700">
-                          /month
-                        </span>
-                      </p>
-                    </div>
-
-                    <ul className="mt-6 space-y-2">
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          20 users included{" "}
-                        </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700"> 5GB of storage </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700"> Email support </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          Help center access{" "}
-                        </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700"> Phone support </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          Community access{" "}
-                        </span>
-                      </li>
-                    </ul>
-
-                    <a
-                      href="#"
-                      className="mt-8 block rounded-full border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
+                <div className="grid grid-cols-1 gap-4 md:gap-0  sm:grid-cols-3 sm:items-center">
+                  {pricing.map((item, index) => (
+                    <div
+                      className={
+                        item.enterprise
+                          ? "rounded-5xl bg-[#eeedfe] p-6 py-28 sm:px-8 lg:p-12 z-20"
+                          : item.plan === "Personal Plan"
+                          ? "rounded-l-5xl  p-6 sm:px-8 lg:p-12 shadow-2xl"
+                          : "rounded-r-5xl p-6 sm:px-8 lg:p-12 shadow-2xl"
+                      }
+                      key={index}
                     >
-                      Get Started
-                    </a>
-                  </div>
+                      <div className="text-center">
+                        <PiUserCirclePlus
+                          className="w-20 h-20 mx-auto mb-5 text-zinc-100"
+                          color="#ff6400"
+                        />
+                        <h2 className="text-lg font-medium text-gray-900">
+                          {item.plan}
+                          <span className="sr-only">Plan</span>
+                        </h2>
+                        <p className="mt-2 sm:mt-4">
+                          <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                            ${item.price}
+                          </strong>
+                        </p>
+                        <p className="mt-2 text-sm text-[#27272a]/80 leading-wide">
+                          Billed {item.billingCycle}
+                        </p>
+                      </div>
 
-                  <div className="rounded-2xl border border-gray-600 p-6 shadow-sm sm:px-8 lg:p-12">
-                    <div className="text-center">
-                      <PiShoppingBagOpen
-                        className="w-20 h-20 mx-auto mb-5 text-zinc-100 "
-                        color="#ff6400"
-                      />
-                      <h2 className="text-lg font-medium text-gray-900">
-                        Starter
-                        <span className="sr-only">Plan</span>
-                      </h2>
+                      <div className="w-full mt-8 flex items-center justify-center mx-auto">
+                        <Button
+                          bg
+                          href={item.href}
+                          className="bg-[#3d3568] hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                          icon={<ArrowRight size={16} />}
+                        >
+                          Get Started
+                        </Button>
+                      </div>
 
-                      <p className="mt-2 sm:mt-4">
-                        <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                          {" "}
-                          20${" "}
-                        </strong>
-
-                        <span className="text-sm font-medium text-gray-700">
-                          /month
-                        </span>
-                      </p>
+                      <div className="w-full flex items-center justify-center">
+                        <ul className="text-left mt-6 space-y-2 mx-auto">
+                          {item.features.map((feature, featureIndex) => (
+                            <li
+                              className="flex items-center gap-1 py-1"
+                              key={featureIndex}
+                            >
+                              <CheckIcon className="size-5 text-[#ff6400]" />
+                              <span className="text-gray-700">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-
-                    <ul className="mt-6 space-y-2">
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          10 users included{" "}
-                        </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700"> 2GB of storage </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700"> Email support </span>
-                      </li>
-
-                      <li className="flex items-center gap-1">
-                        <CheckIcon className="size-5 text-indigo-700" />
-
-                        <span className="text-gray-700">
-                          {" "}
-                          Help center access{" "}
-                        </span>
-                      </li>
-                    </ul>
-
-                    <a
-                      href="#"
-                      className="mt-8 block rounded-full border border-indigo-600 bg-white px-12 py-3 text-center text-sm font-medium text-indigo-600 hover:ring-1 hover:ring-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
-                    >
-                      Get Started
-                    </a>
-                  </div>
+                  ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-20 lg:pt-24 bg-[#141025] pb-8 ">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto">
+          <div className="w-full ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+              <div className="space-y-4">
+                <Badge className="inline-block uppercase tracking-wide">
+                  Our Projects
+                </Badge>
+                <H1 className="text-zinc-100 text-3xl font-bold tracking-tight sm:text-4xl">
+                  Project We Have Done
+                </H1>
+              </div>
+              <div className="space-y-10">
+                <P className="max-w-prose text-zinc-400 md:text-xl text-balance font-thin pb-4">
+                  Empower your team to build and deploy faster with our
+                  cutting-edge platform. Unlock new possibilities and
+                  revolutionize your web presence.
+                </P>{" "}
+                <Button
+                  bg
+                  href="/projects"
+                  className={
+                    "bg-[#3d3568]  hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                  }
+                >
+                  View All Projects
+                </Button>
+              </div>
+            </div>
+            <div>
+              <Card
+                title={"Social Media Ads"}
+                description={"lorem ipsum"}
+                img={"https://picsum.photos/200/300"}
+              />
             </div>
           </div>
         </MaxWidthWrapper>

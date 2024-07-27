@@ -117,3 +117,47 @@ export const features = [
     icon: <BiBulb size={48} className="text-[#ff6400]" />,
   },
 ];
+
+export const pricing = [
+  {
+    plan: "Personal Plan",
+    price: 49.9,
+    billingCycle: "Annually",
+    buttonText: "Get Started",
+    href: "/buy/personal",
+    features: [
+      "25 Analytics Campaigns",
+      "Includes Branded Reports",
+      "300 Keywords for SEO",
+      "24/7 Customer Support",
+    ],
+  },
+  {
+    plan: "Enterprise Plan",
+    price: 149.9,
+    billingCycle: "Annually",
+    buttonText: "Get Started",
+    href: "/buy/enterprise",
+    features: [
+      "25 Analytics Campaigns",
+      "Includes Branded Reports",
+      "300 Keywords for SEO",
+      "15 Social Accounts",
+      "24/7 Customer Support",
+    ],
+    enterprise: true,
+  },
+  {
+    plan: "Business Plan",
+    price: 89.9,
+    billingCycle: "Annually",
+    buttonText: "Get Started",
+    href: "/buy/business",
+    features: [
+      "25 Analytics Campaigns",
+      "Includes Branded Reports",
+      "300 Keywords for SEO",
+      "24/7 Customer Support",
+    ],
+  },
+];
