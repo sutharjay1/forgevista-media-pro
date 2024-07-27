@@ -1,5 +1,15 @@
-import { Clock7 } from "lucide-react";
+import {
+  Check,
+  CheckCircle,
+  Clock7,
+  Handshake,
+  User,
+  Users,
+} from "lucide-react";
 import { BiBulb } from "react-icons/bi";
+import { FaUsers } from "react-icons/fa";
+import { IoMaleFemaleOutline } from "react-icons/io5";
+import { PiUsersThreeFill } from "react-icons/pi";
 
 export const serviceFeatures = [
   {
@@ -160,4 +170,42 @@ export const pricing = [
       "24/7 Customer Support",
     ],
   },
+];
+
+export const numCard = [
+  {
+    title: "Satisfied Clients",
+    value: "3460",
+    icon: <FaUsers size={48} className="text-[#ff6400]" />,
+    description:
+      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
+  },
+  {
+    title: "Successful Campaigns",
+    value: "8550 ",
+    icon: <CheckCircle size={48} className="text-[#ff6400]" />,
+    description:
+      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
+  },
+  {
+    title: "Brands Joined",
+    value: "180",
+    icon: <Handshake size={48} className="text-[#ff6400]" />,
+    description:
+      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
+  },
+  {
+    title: "Marketing Experts",
+    value: "85",
+    icon: <PiUsersThreeFill size={48} className="text-[#ff6400]" />,
+    description:
+      "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
+  },
+];
+
+export const partner = [
+  { src: "./assets/partner-1.png" },
+  { src: "./assets/partner-2.png" },
+  { src: "./assets/partner-3.png" },
+  { src: "./assets/partner-4.png" },
 ];

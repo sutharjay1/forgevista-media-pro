@@ -6,20 +6,27 @@ import {
   PlayCircle,
 } from "lucide-react";
 import React from "react";
+import { PiUserCirclePlus } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import AvatarCircles from "../components/Avatar";
 import Badge from "../components/Badge";
 import Button from "../components/Button";
+import Card from "../components/Card";
 import MaxWidthWrapper from "../components/MaxWidthWrapper";
 import { H1 } from "../components/typographyh1";
 import { H2 } from "../components/typographyh2";
 import { H3 } from "../components/typographyh3";
 import { P } from "../components/typographypara";
-import { aboutFeatures, features, pricing, serviceFeatures } from "../config";
-import { BsFillBuildingsFill } from "react-icons/bs";
-import { PiShoppingBagOpen, PiUserCirclePlus } from "react-icons/pi";
-import Card from "../components/Card";
+import {
+  aboutFeatures,
+  features,
+  numCard,
+  partner,
+  pricing,
+  serviceFeatures,
+} from "../config";
+import NumCard from "../components/NumCard";
 
 const Feature = ({ title, description, icon, highlight }) => {
   return (
@@ -72,7 +79,7 @@ const Home = () => {
                   bg
                   href="/get-started"
                   className={
-                    "bg-[#3d3568]  hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                    "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
                   }
                   icon={<ArrowRight size={16} />}
                 >
@@ -82,7 +89,7 @@ const Home = () => {
                   border
                   href="/watch-intro"
                   // className={
-                  //   "bg-[#3d3568]  hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                  //   "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
                   // }
                   className={" px-6 py-4"}
                   icon={<PlayCircle size={16} />}
@@ -210,10 +217,10 @@ const Home = () => {
               </P>
             </div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-4 gap-y-4 pt-12">
-              <div className="min-w-[28rem] sm:min-w-0 relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 min-h-[21.25rem]">
+              <div className="min-w-[27rem] sm:min-w-0 relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 min-h-[21.25rem]">
                 <img
                   src="./assets/likes-in-social-media.jpg"
-                  className="w-[28rem] h-[21.25rem] object-cover object-center"
+                  className="w-[27rem] h-[21.25rem] object-cover object-center"
                   alt="Feature"
                 />
                 <div className="absolute inset-0 -z-10 bg-[#f6f6ff] w-1/2 group-hover:w-full transition-all duration-300 ease-in-out" />
@@ -221,7 +228,7 @@ const Home = () => {
               {serviceFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out z-10 ${
+                  className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
                     index % 2 === 0 ? "col-span-1" : ""
                   } `}
                 >
@@ -245,14 +252,15 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="flex items-center">
-                      <Link
-                        to={feature.href}
-                        className="flex items-center text-blue-500 hover:text-blue-700 transition-colors"
-                        aria-label="Read More"
+                      <Button
+                        bg
+                        href={feature.href}
+                        className={
+                          "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
+                        }
                       >
                         Read More
-                        <ArrowRightIcon className="w-5 h-5 ml-2" />
-                      </Link>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -264,7 +272,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-32 lg:pt-24 pb-8">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-44 lg:pt-48 pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
@@ -290,8 +298,8 @@ const Home = () => {
                         item.enterprise
                           ? "rounded-5xl bg-[#eeedfe] p-6 py-28 sm:px-8 lg:p-12 z-20"
                           : item.plan === "Personal Plan"
-                          ? "rounded-l-5xl  p-6 sm:px-8 lg:p-12 shadow-2xl"
-                          : "rounded-r-5xl p-6 sm:px-8 lg:p-12 shadow-2xl"
+                          ? "rounded-5xl md:rounded-l-5xl  p-6 sm:px-8 lg:p-12 shadow-2xl"
+                          : "rounded-5xl md:rounded-r-5xl p-6 sm:px-8 lg:p-12 shadow-2xl"
                       }
                       key={index}
                     >
@@ -318,7 +326,7 @@ const Home = () => {
                         <Button
                           bg
                           href={item.href}
-                          className="bg-[#3d3568] hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                          className="bg-[#3d3568] hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
                           icon={<ArrowRight size={16} />}
                         >
                           Get Started
@@ -351,7 +359,7 @@ const Home = () => {
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto">
           <div className="w-full ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
-              <div className="space-y-4">
+              <div className="space-y-4 flex flex-col items-center justify-center md:items-start  ">
                 <Badge className="inline-block uppercase tracking-wide">
                   Our Projects
                 </Badge>
@@ -359,8 +367,8 @@ const Home = () => {
                   Project We Have Done
                 </H1>
               </div>
-              <div className="space-y-10">
-                <P className="max-w-prose text-zinc-400 md:text-xl text-balance font-thin pb-4">
+              <div className="flex  flex-col items-center justify-center space-y-10">
+                <P className="max-w-prose text-center text-zinc-400 md:text-xl text-balance font-thin pb-2">
                   Empower your team to build and deploy faster with our
                   cutting-edge platform. Unlock new possibilities and
                   revolutionize your web presence.
@@ -369,20 +377,163 @@ const Home = () => {
                   bg
                   href="/projects"
                   className={
-                    "bg-[#3d3568]  hover:-translate-y-2 transition-transform hover:bg-[#ff6400] rounded-full px-6 py-4"
+                    "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
                   }
                 >
                   View All Projects
                 </Button>
               </div>
             </div>
-            <div>
-              {/* <Card
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap- pt-8 pb-10 place-items-center">
+              <Card
                 title={"Social Media Ads"}
-                description={"lorem ipsum"}
-                img={"https://picsum.photos/200/300"}
-              /> */}
+                description={
+                  "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+                }
+                img={
+                  "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+              />
+              <Card
+                title={"Email Marketing"}
+                description={
+                  "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+                }
+                img={
+                  "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+              />
+              <Card
+                title={"Content Writter"}
+                description={
+                  "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+                }
+                img={
+                  "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+              />
+              <Card
+                title={"Business Strategy"}
+                description={
+                  "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+                }
+                img={
+                  "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+              />
             </div>
+          </div>
+        </MaxWidthWrapper>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper className=" py-16 ">
+        <div className="w-full ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+            <div className="space-y-4">
+              <Badge className="inline-block uppercase tracking-wide">
+                Achievement
+              </Badge>
+              <H1 className=" text-3xl font-bold tracking-tight sm:text-4xl">
+                Some Number Of Our Achievement
+              </H1>
+              <P className="max-w-prose text-zinc-400 md:text-xl text-balance font-thin pt-2 pb-8">
+                Empower your team to build and deploy faster with our
+                cutting-edge platform. Unlock new possibilities and
+                revolutionize your web presence.
+              </P>{" "}
+              <Button
+                bg
+                href="/projects"
+                className={
+                  "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
+                }
+              >
+                Read More
+              </Button>
+            </div>
+            <div className="relative grid grid-cols-2 gap-8 pt-8 pb-10">
+              {/* Circle SVG */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                className="absolute inset-0 w-full h-full pointer-events-none z-0"
+              >
+                <circle
+                  className="stroke-black/10 stroke-1 dark:stroke-white/10"
+                  cx="50%"
+                  cy="50%"
+                  r="24"
+                  fill="none"
+                />
+              </svg>
+
+              {numCard.map((item, index) => (
+                <NumCard
+                  key={index}
+                  className={`${
+                    Math.floor(index / 2) % 2 === 0
+                      ? index % 2 === 0
+                        ? "bg-[#ffe0cc]"
+                        : "bg-[#eeedfe]"
+                      : index % 2 === 0
+                      ? "bg-[#eeedfe]"
+                      : "bg-[#ffe0cc]"
+                  }`}
+                  {...item}
+                />
+              ))}
+            </div>
+          </div>
+          <div>
+            <span className="relative flex justify-center">
+              <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-zinc-600 to-transparent opacity-75"></div>
+            </span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-20 place-items-center">
+            {partner.map((item, index) => (
+              <div
+                key={index}
+                className="w-full h-16 flex justify-center items-center opacity-50 hover:opacity-100 transition-all"
+              >
+                <img
+                  src={item.src}
+                  alt="partner"
+                  className="w-auto h-11 object-cover"
+                />
+              </div>
+            ))}
+
+            {/* <img
+              src="./assets/partner-1.png"
+              alt="partner"
+              className="w-auto h-16 object-cover"
+            /> */}
+          </div>
+        </div>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage  bg-[#141025] bg-blend-overlay   pb-8 ">
+        {/* <div className="absolute inset-0 bg-black opacity-25"></div> */}
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto ">
+          <div className="w-full ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+              <div className="space-y-4 flex flex-col items-center justify-center md:items-start  ">
+                <Badge className="inline-block uppercase tracking-wide">
+                  Testimonials
+                </Badge>
+                <H1 className="text-zinc-100 text-3xl font-bold tracking-tight sm:text-4xl">
+                  What Client Says About Socialzy
+                </H1>
+              </div>
+              <div className="flex  flex-col items-center justify-center space-y-10">
+                <P className="max-w-prose text-center text-zinc-400 md:text-xl text-balance font-thin pb-2">
+                  Empower your team to build and deploy faster with our
+                  cutting-edge platform. Unlock new possibilities and
+                  revolutionize your web presence.
+                </P>{" "}
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap- pt-8 pb-10 place-items-center"></div>
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>
