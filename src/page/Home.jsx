@@ -161,7 +161,7 @@ const Home = () => {
                 colors={["#50497b", "#3d3568"]}
               >
                 <img
-                  className="w-auto lg:w-full h-96 lg:h-auto z-40 rounded-lg bg-blend-multiply"
+                  className="w-auto lg:w-full h-96 lg:h-auto z-30 rounded-lg bg-blend-multiply"
                   src="./assets/hero-section-girl.png"
                   alt="App screenshot"
                 />

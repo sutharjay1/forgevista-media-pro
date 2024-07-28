@@ -4,6 +4,7 @@ import React, { useMemo, useRef } from "react";
 export function Motion({
   direction = "up",
   className,
+  classNameText,
   framerProps,
   text,
   useInViewProp = true,
@@ -45,8 +46,9 @@ export function Motion({
       initial="hidden"
       animate={useInViewProp && isInView ? "visible" : "hidden"}
       variants={FADE_ANIMATION_VARIANTS}
+      className={className}
     >
-      {children ? children : <span className={className}>{text}</span>}
+      {children ? children : <span classNameText={classNameText}>{text}</span>}
     </motion.div>
   );
 }

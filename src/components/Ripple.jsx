@@ -3,6 +3,7 @@ import React from "react";
 import OrbitingApp from "./OrbitingApp";
 import { BsWhatsapp } from "react-icons/bs";
 import {
+  IoLogoDribbble,
   IoLogoFacebook,
   IoLogoInstagram,
   IoLogoTiktok,
@@ -12,6 +13,8 @@ import {
 import { FaFacebookF } from "react-icons/fa";
 import { H3 } from "./typographyh3";
 import { P } from "./typographypara";
+import { PiPresentationChart } from "react-icons/pi";
+import { Motion } from "./Motion";
 
 const Ripple = React.memo(function Ripple({
   mainCircleSize = 210,
@@ -72,7 +75,7 @@ const Ripple = React.memo(function Ripple({
         duration={20}
         delay={0}
         reverse
-        iconDegrees={[0, 50, 100, 165, 200, 240, 270, 315]}
+        iconDegrees={[0, 50, 175, 210, 250, 270, 315]}
       >
         <span className="p-5">
           <IoLogoInstagram
@@ -86,19 +89,11 @@ const Ripple = React.memo(function Ripple({
             className="text-white bg-[#1da1f2] rounded-full p-2"
           />
         </span>
-        <span>
-          <div className="max-w-sm rounded-4xl bg-zinc-100/60 w-full flex items-center justify-center">
-            <div></div>
-            <div className="w-full flex flex-col items-center justify-center">
-              <H3> 85% </H3>
-              <P>Sales Growth</P>
-            </div>
-          </div>
-        </span>
+
         <span className="p-5">
           <IoLogoTiktok
             size={55}
-            className="text-white bg-[#fe2c55] rounded-full p-2"
+            className="text-white bg-zinc-900 rounded-full p-2"
           />
         </span>
         <span className="p-5">
@@ -116,6 +111,40 @@ const Ripple = React.memo(function Ripple({
       </OrbitingApp>
 
       {children}
+      <Motion
+        direction="left"
+        className="absolute bottom-20 -left-40 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+      >
+        <div className="  flex items-center justify-center px-2 py-2  ">
+          <span className="p-2">
+            <PiPresentationChart
+              className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50    rounded-full"
+              size={12}
+            />
+          </span>
+          <div className="w-full flex flex-col items-center justify-center mx-4">
+            <H3> 85% </H3>
+            <P>Sales Growth</P>
+          </div>
+        </div>
+      </Motion>
+      <Motion
+        direction="left"
+        className="absolute top-20 -right-40 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+      >
+        <div className="  flex items-center justify-center px-2 py-2  ">
+          <span className="p-2">
+            <IoLogoDribbble
+              className="p-3 mx-auto size-14 text-[#fcaa74] bg-[#ffe1cd]    rounded-full"
+              size={12}
+            />
+          </span>
+          <div className="w-full flex flex-col items-center justify-center mx-4">
+            <H3> 180+</H3>
+            <P>Brand Joined</P>
+          </div>
+        </div>
+      </Motion>
     </div>
   );
 });
