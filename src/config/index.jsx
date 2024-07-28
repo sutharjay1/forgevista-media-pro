@@ -86,18 +86,18 @@ export const serviceFeatures = [
 
 export const aboutFeatures = [
   {
-    title: "About Us",
+    title: "Optimization Engine Rank",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu    ",
   },
   {
-    title: "Our Team",
+    title: "Listen & Engage with Followers",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu    ",
     highlight: true,
   },
   {
-    title: "Our Values",
+    title: "Higher Customer Satisfaction",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu    ",
   },
@@ -109,7 +109,7 @@ export const features = [
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
     className:
-      "md:rounded-tl-4xl lg:rounded-l-4xl md:border-r md:border-zinc-600/80 text-center py-3",
+      "md:rounded-tl-4xl lg:rounded-l-4xl md:border-r md:border-zinc-600/80 text-center",
   },
   {
     title: "Save Your Time",

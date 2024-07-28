@@ -33,6 +33,7 @@ import { InlineCode } from "../components/typographyInlineCode";
 import { BiSolidQuoteAltRight } from "react-icons/bi";
 import BlogCard from "../components/BlogCard";
 import { Motion } from "../components/Motion";
+import Ripple from "../components/Ripple";
 
 const Feature = ({
   title,
@@ -153,16 +154,23 @@ const Home = () => {
             </div>
           </div>
           <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-              <img
-                className="w-full rounded-lg"
-                src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg"
-                alt="App screenshot"
-              />
+            <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
+              <Ripple
+                mainCircleSize={240}
+                numCircles={5}
+                colors={["#50497b", "#3d3568"]}
+              >
+                <img
+                  className="w-auto lg:w-full h-96 lg:h-auto z-40 rounded-lg bg-blend-multiply"
+                  src="./assets/hero-section-girl.png"
+                  alt="App screenshot"
+                />
+              </Ripple>
             </div>
           </div>
         </div>
       </MaxWidthWrapper>
+
       <MaxWidthWrapper className="pt-5">
         <div className="p-4 sm:p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
@@ -178,6 +186,7 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
+
       <MaxWidthWrapper className="pt-5  ">
         <div className="grid grid-flow-dense items-center gap-x-12 place-items-center lg:grid-cols-2 pb-8">
           <div className="h-full  w-full flex items-center justify-center">
@@ -194,7 +203,7 @@ const Home = () => {
               </Badge>
             </Motion>
             <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Unlock Your Team's Potential
+              15 Years Of Experiences In Social Media Marekting
             </H1>
             <P className=" text-[#27272a]/80 md:text-xl text-balance">
               Empower your team to build and deploy faster with our cutting-edge
@@ -215,10 +224,12 @@ const Home = () => {
                       />
                     </span>
                     <div>
-                      <H2 className="text-xl md:text-2xl lg:text-3xl border-none font-semibold">
+                      <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
                         {feature.title}
                       </H2>
-                      <p className="text-gray-500">{feature.description}</p>
+                      <P className="text-gray-500 tracking-wide leading-1 ">
+                        {feature.description}
+                      </P>
                     </div>
                   </div>
                 ) : (
@@ -230,10 +241,12 @@ const Home = () => {
                       />
                     </span>
                     <div>
-                      <H2 className="text-xl md:text-2xl lg:text-3xl border-none font-semibold">
+                      <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
                         {feature.title}
                       </H2>
-                      <p className="text-gray-500">{feature.description}</p>
+                      <P className="text-gray-500 tracking-wide leading-1 ">
+                        {feature.description}
+                      </P>
                     </div>
                   </div>
                 )
@@ -242,6 +255,7 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
+
       <MaxWidthWrapper className="max-w-full w-full mx-auto  py-4 bg-[url('../assets/placeholder.png')] bg-no-repeat bg-cover h-[2600px] sm:h-[1550px] md:h-[1400px]  lg:h-[1000px] bg-[#1e193bfb] bg-blend-multiply">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
@@ -610,7 +624,6 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
 
-      {/* <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage bg-[#141025] bg-blend-overlay pb-8"> */}
       <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bg-[url('../assets/bg-footer.png')] bg-[#141025] bg-blend-overlay brightness-75  pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex flex-col items-center mx-auto">
           <div className="w-full">
