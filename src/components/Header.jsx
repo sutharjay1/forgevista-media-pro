@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { BiChevronRight } from "react-icons/bi";
+import { BiChevronDown, BiChevronRight } from "react-icons/bi";
 import { CgMenuGridO } from "react-icons/cg";
+import { FaPhone } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { colorTheme } from "./../constants/colorTheme";
 import Button from "./Button";
@@ -11,25 +12,38 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./Sheet";
-import { ArrowRight } from "lucide-react";
-import { FaPhone } from "react-icons/fa";
 
 const Header = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState(null);
 
   const menuOptions = [
     { title: "Home", path: "/" },
     { title: "About", path: "/about" },
     { title: "Projects", path: "/projects" },
     { title: "Services", path: "/services" },
-    { title: "Blog", path: "/blog" },
+    {
+      title: "Blog",
+      path: "/blog",
+      submenu: [{ title: "Single Blog", path: "/blog/single-blog" }],
+    },
     { title: "Contact", path: "/contact" },
   ];
 
   useEffect(() => {
     setIsOpen(false);
+    setExpandedMenu(null);
   }, [location.pathname]);
+
+  const handleMenuClick = (option) => {
+    if (option.submenu) {
+      setExpandedMenu(expandedMenu === option.title ? null : option.title);
+    } else {
+      setIsOpen(false);
+      setExpandedMenu(null);
+    }
+  };
 
   return (
     <div className="relative w-full z-20">
@@ -45,23 +59,46 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="hidden lg:flex items-center justify-center gap-12">
-              <div className="flex items-center justify-center gap-10">
-                {menuOptions.map((option) => (
-                  <Link to={option.path} key={option.path}>
-                    <span
-                      className={`text-base font-light ${
-                        option.path === location.pathname
-                          ? "text-[#ff6400] font-semibold"
-                          : `text-[${colorTheme.lightZinc}]`
-                      }`}
-                    >
-                      {option.title}
-                    </span>
+
+            <nav className="hidden lg:flex items-center justify-center gap-10">
+              {menuOptions.map((option) => (
+                <div key={option.path} className="relative group">
+                  <Link
+                    to={option.path}
+                    className={`text-base font-light ${
+                      option.path === location.pathname
+                        ? "text-[#ff6400] font-semibold"
+                        : `text-[${colorTheme.lightZinc}]`
+                    } hover:text-[#ff6400] transition-colors flex items-center`}
+                  >
+                    {option.title}
+                    {option.submenu && <BiChevronDown className="ml-1" />}
                   </Link>
-                ))}
-              </div>
-            </div>
+                  {option.submenu && (
+                    <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                      <div
+                        className="py-1"
+                        role="menu"
+                        aria-orientation="vertical"
+                        aria-labelledby="options-menu"
+                      >
+                        {option.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.path}
+                            to={subItem.path}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            {subItem.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
             <Button
               bg
               href="/get-started"
@@ -100,29 +137,48 @@ const Header = () => {
             </SheetTitle>
           </SheetHeader>
           <div className="flex  flex-col h-full ">
-            <div className="flex-1 h-full mt-6">
-              <nav className="grid gap-y-4">
-                {menuOptions.map((option) => (
-                  <Link
-                    to={option.path}
-                    key={option.path}
-                    onClick={() => setIsOpen(false)}
-                    className={`-m-3 flex items-center rounded-md p-3 text-sm font-semibold ${
+            <nav className="flex-1 mt-6 grid gap-y-4">
+              {menuOptions.map((option) => (
+                <div key={option.path}>
+                  <div
+                    onClick={() => handleMenuClick(option)}
+                    className={`flex items-center justify-between rounded-md p-3 text-sm font-semibold ${
                       option.path === location.pathname
                         ? "text-[#ff6400] underline underline-offset-8 font-bold"
-                        : `text-zinc-800`
-                    }`}
+                        : "text-zinc-800"
+                    } hover:bg-gray-100`}
                   >
-                    <span className="ml-3 text-base font-normal text-zinc-800">
+                    <span className="ml-3 text-base font-normal">
                       {option.title}
                     </span>
-                    <span>
-                      <BiChevronRight className="ml-3 h-4 w-4" />
-                    </span>
-                  </Link>
-                ))}
-              </nav>
-            </div>
+                    {option.submenu ? (
+                      <BiChevronDown
+                        className={`h-4 w-4 transition-transform ${
+                          expandedMenu === option.title ? "rotate-180" : ""
+                        }`}
+                      />
+                    ) : (
+                      <BiChevronRight className="h-4 w-4" />
+                    )}
+                  </div>
+                  {option.submenu && expandedMenu === option.title && (
+                    <div className="ml-6 mt-2 space-y-2">
+                      {option.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          to={subItem.path}
+                          onClick={() => setIsOpen(false)}
+                          className="block p-2 text-sm text-gray-600 hover:text-[#ff6400]"
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
             <div className="mt-3 space-y-2">
               <div className="space-y-1 w-full">
                 <Link to={"/auth?mode=signup"} onClick={() => setIsOpen(false)}>
