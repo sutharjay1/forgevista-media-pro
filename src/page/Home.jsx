@@ -558,7 +558,7 @@ const Home = () => {
               <Circle
                 strokeWidth={0.1}
                 strokeDasharray={0.3}
-                className="absolute z-0 w-96 h-96"
+                className="absolute z-0 w-64 h-64 md:w-96 md:h-96"
               />
               <div className="grid grid-cols-2 gap-4 md:gap-8 relative z-10">
                 {numCard.map((item, index) => (
