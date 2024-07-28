@@ -9,8 +9,10 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetTrigger
+  SheetTrigger,
 } from "./Sheet";
+import { ArrowRight } from "lucide-react";
+import { FaPhone } from "react-icons/fa";
 
 const Header = () => {
   const pathname = useLocation();
@@ -65,10 +67,21 @@ const Header = () => {
               </div>
             </div>
             <Button
+              bg
+              href="/get-started"
+              className={
+                "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
+              }
+             
+            >
+              <span><FaPhone size={20} className="mr-2 rotate-90" /></span>
+              (+44) 123 456 789
+            </Button>
+            {/* <Button
               message="Sign Up"
               className="px-6 rounded-2xl bg-[#ff6400]"
               href={"/auth"}
-            />
+            /> */}
             <div className="flex lg:hidden items-center justify-center gap-12">
               <span onClick={handleMenu}>
                 <SheetTrigger>
@@ -88,7 +101,7 @@ const Header = () => {
               {" "}
               <Link to={"/"}>
                 <img
-                  src="../assets/FooterLogo.png"
+                  src="../assets/Logo.png"
                   className="mx-auto h-6 w-auto object-cover"
                   alt="mediaPro"
                 />
@@ -105,10 +118,10 @@ const Header = () => {
                     className={`-m-3 flex items-center rounded-md p-3 text-sm font-semibold ${
                       option.path === pathname.pathname
                         ? "text-[#ff6400] underline underline-offset-8 font-bold"
-                        : `text-[${colorTheme.lightZinc}]`
+                        : `text-zinc-800`
                     }`}
                   >
-                    <span className="ml-3 text-base font-normal text-zinc-200">
+                    <span className="ml-3 text-base font-normal text-zinc-800">
                       {option.title}
                     </span>
                     <span>
