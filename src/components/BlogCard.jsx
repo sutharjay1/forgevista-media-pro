@@ -8,7 +8,7 @@ import { H4 } from "./typographyh4.jsx";
 
 const BlogCard = ({ title, description, img, date, href }) => {
   return (
-    <div className="w-full flex flex-col  p-4">
+    <div className="w-full flex flex-1 flex-col  p-4">
       <img
         alt={title || "Blog Image"}
         src={

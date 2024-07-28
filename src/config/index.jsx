@@ -108,13 +108,15 @@ export const features = [
     title: "Why Choose Us",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
-    className: "rounded-l-4xl border-r border-zinc-600/80 text-center",
+    className:
+      "md:rounded-tl-4xl lg:rounded-l-4xl md:border-r md:border-zinc-600/80 text-center py-3",
   },
   {
     title: "Save Your Time",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
     icon: <Clock7 size={48} className="text-[#ff6400] " />,
+    className: "rounded-tr-4xl lg:rounded-none ",
   },
   {
     title: "Affordable Price For You",

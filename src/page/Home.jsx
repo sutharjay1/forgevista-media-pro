@@ -48,23 +48,26 @@ const Feature = ({
     <div
       className={twMerge(
         "flex flex-col items-center text-center p-2  transition-all duration-300 bg-[#28214c]   ",
-        highlight && "bg-[#ff6400] p-8",
+        highlight && "bg-[#ff6400] p-8 rounded-4xl",
         className
-        // isFirst && "rounded-l-4xl",
-        // isLast && "rounded-r-4xl",
-        // !isFirst && !isLast && index % 2 !== 0 && "rounded-l-4xl"
       )}
     >
       {highlight ? (
-        <div className="min-h-[22rem] flex flex-col items-center justify-center p-3 bg-[#ff6400] rounded-4xl">
-          {icon && <div className="p-3 rounded-full">{icon}</div>}
-          <H3 className="text-xl font-semibold mb-2 text-white">{title}</H3>
+        <div className="min-h-[18rem] flex flex-col items-center justify-center p-1 bg-[#ff6400] rounded-4xl">
+          {icon && <div className="p-3 rounded-full mb-2">{icon}</div>}
+          <H3 className="text-xl font-semibold text-white text-left ">
+            {title}
+          </H3>
           <P className="text-gray-300">{description}</P>
         </div>
       ) : (
-        <div className="min-h-80 flex flex-col items-center justify-center">
-          {icon && <div className="mb-4 p-3 mx-auto text-center ">{icon}</div>}
-          <H3 className="text-xl font-semibold mb-2 text-white">{title}</H3>
+        <div className="min-h-64 flex flex-col items-center justify-center py-6">
+          {icon && (
+            <div className="mb-2 sm:mb-4 p-3 mx-auto text-center ">{icon}</div>
+          )}
+          <H3 className="text-xl font-semibold   text-white text-left text-balance">
+            {title}
+          </H3>
           <P className="text-gray-300 tracking-wide text-balance mx-auto">
             {description}
           </P>
@@ -77,8 +80,8 @@ const Feature = ({
 const Home = () => {
   return (
     <>
-      <MaxWidthWrapper>
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+      <MaxWidthWrapper className="pt-10">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8 place-items-center">
           <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <Badge className="inline-block uppercase tracking-wide">
               Welcome To Socialzy
@@ -147,16 +150,11 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper>
-        <div className="p-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-items-center">
+      <MaxWidthWrapper className="pt-5">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className={twMerge(
-                  feature[index] === index && "border-r border-zinc-400 "
-                )}
-              >
+              <div key={index}>
                 <Feature
                   key={feature.title}
                   {...feature}
@@ -167,7 +165,7 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="pt-10">
+      <MaxWidthWrapper className="pt-5  ">
         <div className="grid grid-flow-dense items-center gap-x-12 place-items-center lg:grid-cols-2 pb-8">
           <div className="h-full  w-full flex items-center justify-center">
             <img
@@ -225,7 +223,7 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="max-w-full w-full mx-auto   bg-[url('../assets/placeholder.png')]   bg-[#1e193bfb] bg-blend-multiply">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto  py-4 bg-[url('../assets/placeholder.png')] bg-no-repeat bg-cover h-[2600px] sm:h-[1550px] md:h-[1400px]  lg:h-[1000px] bg-[#1e193bfb] bg-blend-multiply">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
@@ -297,7 +295,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-44 lg:pt-48 pb-8">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto py-4 pt-20 lg:pt-28 pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
@@ -380,7 +378,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-20 lg:pt-24 bg-[#141025] pb-8 ">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto py-4 pt-10 lg:pt-6 bg-[#141025] pb-8 ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto">
           <div className="w-full ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
@@ -392,8 +390,8 @@ const Home = () => {
                   Project We Have Done
                 </H1>
               </div>
-              <div className="flex  flex-col items-center justify-center space-y-10">
-                <P className="max-w-prose text-center text-zinc-400 md:text-xl text-balance font-thin pb-2">
+              <div className="flex  flex-col items-start justify-start space-y-5">
+                <P className="max-w-prose text-left  text-zinc-400 md:text-xl text-balance font-thin pb-2">
                   Empower your team to build and deploy faster with our
                   cutting-edge platform. Unlock new possibilities and
                   revolutionize your web presence.
@@ -451,7 +449,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className=" py-16 ">
+      <MaxWidthWrapper className="pt-14 lg:pt-20 ">
         <div className="w-full ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
             <div className="space-y-4">
