@@ -120,7 +120,7 @@ const Ripple = React.memo(function Ripple({
           </OrbitingApp>
           <Motion
             direction="left"
-            className="absolute bottom-20 -left-40 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute bottom-20 -left-24 lg:-left-40 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <div className="  flex items-center justify-center px-2 py-2  ">
               <span className="p-2">
@@ -137,7 +137,7 @@ const Ripple = React.memo(function Ripple({
           </Motion>
           <Motion
             direction="left"
-            className="absolute top-20 -right-40 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute top-24 lg:top-20 -right-24 lg:-right-40 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <div className="  flex items-center justify-center px-2 py-2  ">
               <span className="p-2">
@@ -160,7 +160,7 @@ const Ripple = React.memo(function Ripple({
         <>
           <Motion
             direction="right"
-            className="absolute bottom-20 -right-28 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute bottom-24    lg:bottom-20 -right-32 lg:-right-28 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <div className="  flex items-center justify-center px-2 py-2  ">
               <span className="p-2">
@@ -177,7 +177,7 @@ const Ripple = React.memo(function Ripple({
           </Motion>
           <Motion
             direction="left"
-            className="absolute top-28 -left-32 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute top-32 lg:top-28 -left-32 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <div className="  flex items-center justify-center px-2 py-2  ">
               <span className="p-2">
@@ -194,7 +194,7 @@ const Ripple = React.memo(function Ripple({
           </Motion>
           <Motion
             direction="down"
-            className="absolute top-36 -right-32 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute top-24 lg:top-36 -right-32 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <ChartIcon />
           </Motion>

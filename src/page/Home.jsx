@@ -153,7 +153,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+          <div className="mt-24 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
             <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
               <Ripple
                 mainCircleSize={240}
@@ -162,7 +162,7 @@ const Home = () => {
                 sectionOne
               >
                 <img
-                  className="w-auto lg:w-full h-96 lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
+                  className="w-auto lg:w-full h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
                   src="./assets/hero-section-girl.png"
                   alt="App screenshot"
                 />
@@ -199,7 +199,7 @@ const Home = () => {
               sectionTwo
             >
               <img
-                className="w-auto lg:w-full h-96 lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
+                className="w-auto lg:w-full h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
                 src="./assets/hero-section-boy.png"
                 alt="App screenshot"
               />
