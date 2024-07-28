@@ -8,9 +8,10 @@ import {
   Users,
 } from "lucide-react";
 import { BiBulb } from "react-icons/bi";
+import { BsBuildings } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa";
 import { IoMaleFemaleOutline } from "react-icons/io5";
-import { PiUsersThreeFill } from "react-icons/pi";
+import { PiShoppingBagOpenDuotone, PiUsersThreeFill } from "react-icons/pi";
 
 export const serviceFeatures = [
   {
@@ -139,6 +140,13 @@ export const pricing = [
   {
     plan: "Personal Plan",
     price: 49.9,
+    icon: (
+      <User
+        size={24}
+        className="w-20 h-20 mx-auto mb-5 text-zinc-100"
+        color="#ff6400"
+      />
+    ),
     billingCycle: "Annually",
     buttonText: "Get Started",
     href: "/buy/personal",
@@ -152,6 +160,13 @@ export const pricing = [
   {
     plan: "Enterprise Plan",
     price: 149.9,
+    icon: (
+      <BsBuildings
+        size={24}
+        className="w-20 h-20 mx-auto mb-5 text-zinc-100"
+        color="#ff6400"
+      />
+    ),
     billingCycle: "Annually",
     buttonText: "Get Started",
     href: "/buy/enterprise",
@@ -167,6 +182,13 @@ export const pricing = [
   {
     plan: "Business Plan",
     price: 89.9,
+    icon: (
+      <PiShoppingBagOpenDuotone
+        size={24}
+        className="w-20 h-20 mx-auto mb-5 text-zinc-100"
+        color="#ff6400"
+      />
+    ),
     billingCycle: "Annually",
     buttonText: "Get Started",
     href: "/buy/business",

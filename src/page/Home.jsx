@@ -172,8 +172,8 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="pt-[5rem]">
-        <div className="p-4 sm:p-6">
+      <MaxWidthWrapper className="pt-[5rem] pb-6">
+        <div className="p-1 sm:p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
             {features.map((feature, index) => (
               <div key={index}>
@@ -426,10 +426,7 @@ const Home = () => {
                         key={index}
                       >
                         <div className="text-center">
-                          <PiUserCirclePlus
-                            className="w-20 h-20 mx-auto mb-5 text-zinc-100"
-                            color="#ff6400"
-                          />
+                          {item.icon}
                           <h2 className="text-lg font-medium text-gray-900">
                             {item.plan}
                             <span className="sr-only">Plan</span>
