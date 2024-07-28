@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export default function OrbitingApp({
@@ -13,15 +13,35 @@ export default function OrbitingApp({
   iconDegrees = [], // Array to specify the degree of each icon
 }) {
   const [rootRadius, setRootRadius] = useState(radius);
-  if (mobileRadius) {
-    window.addEventListener("resize", () => {
+
+  // if (mobileRadius) {
+  //   window.addEventListener("resize", () => {
+  //     if (window.innerWidth < 768) {
+  //       setRootRadius(mobileRadius);
+  //     } else {
+  //       setRootRadius(radius);
+  //     }
+  //   });
+  // }
+
+  useEffect(() => {
+    const handleResize = () => {
       if (window.innerWidth < 768) {
         setRootRadius(mobileRadius);
       } else {
         setRootRadius(radius);
       }
-    });
-  }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [radius, mobileRadius]);
+
   return (
     <>
       {path && (
