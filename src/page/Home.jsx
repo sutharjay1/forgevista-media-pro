@@ -3,6 +3,7 @@ import {
   ArrowRightIcon,
   CheckCircle,
   CheckIcon,
+  Circle,
   PlayCircle,
 } from "lucide-react";
 import React from "react";
@@ -378,7 +379,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto py-4 pt-10 lg:pt-6 bg-[#141025] pb-8 ">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto py-4 pt-10 lg:pt-6 h-[2200px] md:h-[1200px]  lg:h-[600px] bg-[#141025] pb-28 ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto">
           <div className="w-full ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
@@ -407,7 +408,7 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 pt-8 pb-10 place-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 pb-10 place-items-center">
               <Card
                 title={"Social Media Ads"}
                 description={
@@ -449,7 +450,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="pt-14 lg:pt-20 ">
+      <MaxWidthWrapper className="pt-48 md:pt-32 lg:pt-52 ">
         <div className="w-full ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
             <div className="space-y-4">
@@ -474,37 +475,29 @@ const Home = () => {
                 Read More
               </Button>
             </div>
-            <div className="relative grid grid-cols-2 gap-8 pt-8 pb-10">
-              {/* Circle SVG */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                className="absolute inset-0 w-full h-full pointer-events-none z-0"
-              >
-                <circle
-                  className="stroke-black/10 stroke-1 dark:stroke-white/10"
-                  cx="50%"
-                  cy="50%"
-                  r="24"
-                  fill="none"
-                />
-              </svg>
-
-              {numCard.map((item, index) => (
-                <NumCard
-                  key={index}
-                  className={`${
-                    Math.floor(index / 2) % 2 === 0
-                      ? index % 2 === 0
-                        ? "bg-[#ffe0cc]"
-                        : "bg-[#eeedfe]"
-                      : index % 2 === 0
-                      ? "bg-[#eeedfe]"
-                      : "bg-[#ffe0cc]"
-                  }`}
-                  {...item}
-                />
-              ))}
+            <div className="relative flex items-center justify-center pt-20 pb-10">
+              <Circle
+                strokeWidth={0.1}
+                strokeDasharray={0.3}
+                className="absolute z-0 w-96 h-96"
+              />
+              <div className="grid grid-cols-2 gap-4 md:gap-8 relative z-10">
+                {numCard.map((item, index) => (
+                  <NumCard
+                    key={index}
+                    className={`${
+                      Math.floor(index / 2) % 2 === 0
+                        ? index % 2 === 0
+                          ? "bg-[#ffe0cc]"
+                          : "bg-[#eeedfe]"
+                        : index % 2 === 0
+                        ? "bg-[#eeedfe]"
+                        : "bg-[#ffe0cc]"
+                    }`}
+                    {...item}
+                  />
+                ))}
+              </div>
             </div>
           </div>
           <div>
@@ -536,7 +529,7 @@ const Home = () => {
       </MaxWidthWrapper>
 
       {/* <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage bg-[#141025] bg-blend-overlay pb-8"> */}
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bg-[url('../assets/bg-footer.png')] bg-[#141025] bg-blend-overlay  pb-8">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bg-[url('../assets/bg-footer.png')] bg-[#141025] bg-blend-overlay brightness-75  pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex flex-col items-center mx-auto">
           <div className="w-full">
             {/* Header Section */}
@@ -558,34 +551,41 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Main Content Section */}
+    
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full py-6">
               {/* Stats Section */}
-              <div className="p-6 rounded-lg shadow-md flex flex-col items-center justify-start gap-4 col-span-1 md:col-span-1">
-                <div className="w-full flex flex-col items-center text-center space-y-4">
-                  <div className="flex flex-col items-center">
-                    <H3 className="text-2xl font-bold text-[#ff6400]">250%</H3>
-                    <P className="text-lg text-gray-600 mt-1">
-                      - Follower Growth
-                    </P>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <H3 className="text-2xl font-bold text-[#ff6400]">80%</H3>
-                    <P className="text-lg text-gray-600 mt-1">
-                      - Increase Sales
-                    </P>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <H3 className="text-2xl font-bold text-[#ff6400]">140%</H3>
-                    <P className="text-lg text-gray-600 mt-1">
-                      - Total Engagement
-                    </P>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <H3 className="text-2xl font-bold text-[#ff6400]">75%</H3>
-                    <P className="text-lg text-gray-600 mt-1">
-                      - Income Growth
-                    </P>
+              <div className="flex items-center justify-center col-span-1 md:col-span-1">
+                <div className="p-6 rounded-lg shadow-md flex flex-col items-center justify-start gap-4">
+                  <div className="w-full flex flex-col items-center text-center space-y-4">
+                    <div className="w-full flex items-center justify-center">
+                      <H3 className="text-2xl font-bold text-[#ff6400]">
+                        250%
+                      </H3>
+                      <P className="text-lg text-gray-600 mt-1">
+                        - Follower Growth
+                      </P>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <H3 className="text-2xl font-bold text-[#ff6400]">80%</H3>
+                      <P className="text-lg text-gray-600 mt-1">
+                        - Increase Sales
+                      </P>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <H3 className="text-2xl font-bold text-[#ff6400]">
+                        140%
+                      </H3>
+                      <P className="text-lg text-gray-600 mt-1">
+                        - Total Engagement
+                      </P>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <H3 className="text-2xl font-bold text-[#ff6400]">75%</H3>
+                      <P className="text-lg text-gray-600 mt-1">
+                        - Income Growth
+                      </P>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -594,7 +594,7 @@ const Home = () => {
               <div className="shadow-md flex items-center justify-center order-1 md:order-2 md:col-span-1 col-span-1">
                 <img
                   src="https://images.unsplash.com/photo-1721548902888-36f759c71727?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  className="w-full h-96 object-cover rounded-3xl"
+                  className="w-[85%] h-96 object-cover rounded-3xl"
                   alt="image"
                 />
               </div>

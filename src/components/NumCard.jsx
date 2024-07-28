@@ -7,7 +7,7 @@ const NumCard = ({ title, icon, value, className }) => {
   return (
     <div
       className={twMerge(
-        "px-16 py-8  rounded-lg shadow-lg transition-transform transform ",
+        " px-6 py-8 md:px-8 md:py-10  rounded-lg shadow-lg transition-transform transform ",
         className
       )}
     >
@@ -19,7 +19,9 @@ const NumCard = ({ title, icon, value, className }) => {
             <span className="text-[#ff6400] text-3xl">+</span>{" "}
           </span>
         </div>
-        <H3 className="text-xl font-semibold text-zinc-700 text-center ">{title}</H3>
+        <H3 className="text-xl font-semibold text-zinc-700 text-center ">
+          {title}
+        </H3>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const Card = ({ title, description, img }) => {
         <img
           alt=""
           src={img}
-          className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity group-hover:opacity-50"
+          className="absolute inset-0 w-full h-full object-cover "
         />
       </div>
       <div className="relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-25 group-hover:bg-[#ff6400] transition-opacity group-hover:bg-opacity-50 flex flex-col justify-end min-h-[28rem] h-full">
