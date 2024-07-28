@@ -1,21 +1,19 @@
 import { Circle } from "lucide-react";
 import React from "react";
-import OrbitingApp from "./OrbitingApp";
-import { BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
 import {
   IoLogoDribbble,
-  IoLogoFacebook,
   IoLogoInstagram,
   IoLogoTiktok,
   IoLogoTwitter,
-  IoLogoYoutube,
+  IoLogoYoutube
 } from "react-icons/io5";
-import { FaFacebookF } from "react-icons/fa";
+import { PiPresentationChart } from "react-icons/pi";
+import { ChartIcon } from "./ChartIcon";
+import { Motion } from "./Motion";
+import OrbitingApp from "./OrbitingApp";
 import { H3 } from "./typographyh3";
 import { P } from "./typographypara";
-import { PiPresentationChart } from "react-icons/pi";
-import { Motion } from "./Motion";
-import { ChartIcon } from "./ChartIcon";
 
 const Ripple = React.memo(function Ripple({
   sectionOne,

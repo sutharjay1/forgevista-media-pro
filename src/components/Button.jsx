@@ -1,7 +1,6 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
-import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
 
 const Button = ({
   children,

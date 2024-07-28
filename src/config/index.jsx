@@ -1,16 +1,13 @@
 import {
-  Check,
   CheckCircle,
   Clock7,
   HandCoins,
   Handshake,
-  User,
-  Users,
+  User
 } from "lucide-react";
 import { BiBulb } from "react-icons/bi";
 import { BsBuildings } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa";
-import { IoMaleFemaleOutline } from "react-icons/io5";
 import { PiShoppingBagOpenDuotone, PiUsersThreeFill } from "react-icons/pi";
 
 export const serviceFeatures = [

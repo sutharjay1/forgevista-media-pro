@@ -1,24 +1,27 @@
 import {
   ArrowRight,
-  ArrowRightIcon,
   CheckCircle,
   CheckIcon,
   Circle,
   PlayCircle,
 } from "lucide-react";
 import React from "react";
-import { PiUserCirclePlus } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 import AvatarCircles from "../components/Avatar";
 import Badge from "../components/Badge";
+import BlogCard from "../components/BlogCard";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import MaxWidthWrapper from "../components/MaxWidthWrapper";
+import { Motion } from "../components/Motion";
+import NumCard from "../components/NumCard";
+import Ripple from "../components/Ripple";
 import { H1 } from "../components/typographyh1";
 import { H2 } from "../components/typographyh2";
 import { H3 } from "../components/typographyh3";
 import { H4 } from "../components/typographyh4";
+import { InlineCode } from "../components/typographyInlineCode";
 import { P } from "../components/typographypara";
 import {
   aboutFeatures,
@@ -28,12 +31,6 @@ import {
   pricing,
   serviceFeatures,
 } from "../config";
-import NumCard from "../components/NumCard";
-import { InlineCode } from "../components/typographyInlineCode";
-import { BiSolidQuoteAltRight } from "react-icons/bi";
-import BlogCard from "../components/BlogCard";
-import { Motion } from "../components/Motion";
-import Ripple from "../components/Ripple";
 
 const Feature = ({
   title,

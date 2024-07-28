@@ -1,7 +1,7 @@
 import React from "react";
-import { H3 } from "./typographyh3";
-import NumberTicker from "./NumberTicker";
 import { twMerge } from "tailwind-merge";
+import NumberTicker from "./NumberTicker";
+import { H3 } from "./typographyh3";
 
 const NumCard = ({ title, icon, value, className }) => {
   return (

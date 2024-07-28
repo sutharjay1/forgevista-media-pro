@@ -10,19 +10,9 @@ export default function OrbitingApp({
   radius = 50,
   mobileRadius = 30,
   path = true,
-  iconDegrees = [], // Array to specify the degree of each icon
+  iconDegrees = [],
 }) {
   const [rootRadius, setRootRadius] = useState(radius);
-
-  // if (mobileRadius) {
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth < 768) {
-  //       setRootRadius(mobileRadius);
-  //     } else {
-  //       setRootRadius(radius);
-  //     }
-  //   });
-  // }
 
   useEffect(() => {
     const handleResize = () => {

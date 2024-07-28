@@ -1,10 +1,9 @@
+import { ArrowRight } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { formatDate } from "../lib/formatDate.js";
-import { ArrowRight } from "lucide-react";
 import { H2 } from "./typographyh2.jsx";
 import { P } from "./typographypara.jsx";
-import { H4 } from "./typographyh4.jsx";
 
 const BlogCard = ({ title, description, img, date, href }) => {
   return (

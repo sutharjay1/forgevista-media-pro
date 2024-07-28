@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import React from "react";
 import { FaFacebookF, FaPhone } from "react-icons/fa";
 import { HiMapPin } from "react-icons/hi2";
 import { ImLinkedin2 } from "react-icons/im";
 import { IoLogoInstagram, IoLogoTwitter, IoMail } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

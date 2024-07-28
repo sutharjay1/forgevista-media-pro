@@ -1,14 +1,8 @@
-import { cn } from "@/lib/utils";
+import { twMerge } from "tailwind-merge";
 
-export function BlockQuote({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+export function BlockQuote({ children, className }) {
   return (
-    <blockquote className={cn(className, "mt-6 border-l-2 pl-4")}>
+    <blockquote className={twMerge(className, "mt-6 border-l-2 pl-4")}>
       {children}
     </blockquote>
   );
