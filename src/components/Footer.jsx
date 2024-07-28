@@ -247,7 +247,7 @@ const Footer = () => {
     <footer className="bg-[url('../assets/bg-footer.png')] bg-[#141025] bg-blend-overlay">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4 place-items-center">
-          <div className="bg-[#18142d] p-8 rounded-lg divide-y-[1px] divide-zinc-500/25">
+          <div className="w-full bg-[#18142d] p-8 rounded-lg divide-y-[1px] divide-zinc-500/25">
             <Link to="/" className="block mb-6 ">
               <img
                 src="../assets/FooterLogo.png"
@@ -271,7 +271,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="px-4 md:px-0">
+          <div className="w-full md:flex md:flex-col md:items-center md:justify-center px-4 md:px-0">
             <h2 className="text-zinc-200 text-lg font-semibold mb-4">
               Other Pages
             </h2>
@@ -292,7 +292,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="px-4 md:px-0">
+          <div className="w-full md:flex md:flex-col md:items-center md:justify-center px-4 md:px-0">
             <h2 className="text-zinc-200 text-lg font-semibold mb-4">
               Other Links
             </h2>

@@ -315,12 +315,12 @@ const Home = () => {
 
             <div className="w-full">
               <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-                <div className="grid grid-cols-1 gap-4 md:gap-0  sm:grid-cols-3 sm:items-center">
+                <div className="grid grid-cols-1 gap-4 md:gap-0  lg:grid-cols-3 sm:items-center">
                   {pricing.map((item, index) => (
                     <div
                       className={
                         item.enterprise
-                          ? "rounded-5xl bg-[#eeedfe] p-6 py-28 sm:px-8 lg:p-12 z-20"
+                          ? "rounded-5xl bg-[#eeedfe] p-6 py-14 sm:py-28 sm:px-8 lg:p-12 z-20"
                           : item.plan === "Personal Plan"
                           ? "rounded-5xl md:rounded-l-5xl  p-6 sm:px-8 lg:p-12 shadow-2xl"
                           : "rounded-5xl md:rounded-r-5xl p-6 sm:px-8 lg:p-12 shadow-2xl"
@@ -391,8 +391,8 @@ const Home = () => {
                   Project We Have Done
                 </H1>
               </div>
-              <div className="flex  flex-col items-start justify-start space-y-5">
-                <P className="max-w-prose text-left  text-zinc-400 md:text-xl text-balance font-thin pb-2">
+              <div className="flex  flex-col items-center md:items-start justify-start space-y-5">
+                <P className="max-w-prose text-center md:text-left  text-zinc-400 md:text-xl text-balance font-thin pb-2">
                   Empower your team to build and deploy faster with our
                   cutting-edge platform. Unlock new possibilities and
                   revolutionize your web presence.
@@ -475,7 +475,7 @@ const Home = () => {
                 Read More
               </Button>
             </div>
-            <div className="relative flex items-center justify-center pt-20 pb-10">
+            <div className="relative flex items-center justify-center py-10 md:pt-20 pb-10">
               <Circle
                 strokeWidth={0.1}
                 strokeDasharray={0.3}
@@ -500,12 +500,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="pt-8">
             <span className="relative flex justify-center">
               <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-zinc-600 to-transparent opacity-75"></div>
             </span>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-20 place-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-10 place-items-center">
             {partner.map((item, index) => (
               <div
                 key={index}
@@ -550,8 +550,6 @@ const Home = () => {
                 </P>
               </div>
             </div>
-
-    
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full py-6">
               {/* Stats Section */}
