@@ -41,7 +41,7 @@ const Header = () => {
             <div className="text-xl font-semibold tracking-wide select-none">
               <Link to={"/"}>
                 <img
-                  src="../assets/FooterLogo.png"
+                  src="../assets/Logo.png"
                   className="mx-auto h-6 w-auto object-cover"
                   alt="mediaPro"
                 />
@@ -88,7 +88,7 @@ const Header = () => {
               {" "}
               <Link to={"/"}>
                 <img
-                  src="../assets/Logo.png"
+                  src="../assets/FooterLogo.png"
                   className="mx-auto h-6 w-auto object-cover"
                   alt="mediaPro"
                 />

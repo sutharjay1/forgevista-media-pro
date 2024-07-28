@@ -172,11 +172,11 @@ const Home = () => {
                 feature.highlight === true ? (
                   <div
                     key={index}
-                    className="flex items-center gap-4 translate-x-3 px-4 py-3 bg-[#edeaff] rounded-5xl"
+                    className="flex items-center gap-4 translate-x-2 md:translate-x-6 px-4 py-3 bg-[#edeaff] rounded-5xl"
                   >
                     <CheckCircle
-                      className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50  rounded-full"
-                      // size={48}
+                      className="p-3 mx-auto text-[#a5a3ef] bg-zinc-50  rounded-full"
+                      size={12}
                     />
                     <div>
                       <H2 className="text-xl md:text-2xl lg:text-3xl border-none font-semibold">
