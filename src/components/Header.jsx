@@ -85,7 +85,7 @@ const Header = () => {
         <SheetContent
           side="left"
           // close={handleMenu}
-          className="backdrop-blur-xl"
+          className="bg-zinc-50  w-full h-full"
         >
           <SheetHeader>
             <SheetTitle>
