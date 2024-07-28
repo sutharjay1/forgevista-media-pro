@@ -32,26 +32,43 @@ import { InlineCode } from "../components/typographyInlineCode";
 import { BiSolidQuoteAltRight } from "react-icons/bi";
 import BlogCard from "../components/BlogCard";
 
-const Feature = ({ title, description, icon, highlight }) => {
+const Feature = ({
+  title,
+  description,
+  icon,
+  highlight,
+  index,
+  total,
+  className,
+}) => {
+  const isFirst = index === 0;
+  const isLast = index === total - 1;
+
   return (
     <div
       className={twMerge(
-        "flex flex-col items-center text-center p-2 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1",
-        highlight && "bg-[#ff6400] p-8"
+        "flex flex-col items-center text-center p-2  transition-all duration-300 bg-[#28214c]   ",
+        highlight && "bg-[#ff6400] p-8",
+        className
+        // isFirst && "rounded-l-4xl",
+        // isLast && "rounded-r-4xl",
+        // !isFirst && !isLast && index % 2 !== 0 && "rounded-l-4xl"
       )}
     >
       {highlight ? (
-        <div className="h-full p-3 bg-[#ff6400] rounded-4xl">
+        <div className="min-h-[22rem] flex flex-col items-center justify-center p-3 bg-[#ff6400] rounded-4xl">
           {icon && <div className="p-3 rounded-full">{icon}</div>}
           <H3 className="text-xl font-semibold mb-2 text-white">{title}</H3>
           <P className="text-gray-300">{description}</P>
         </div>
       ) : (
-        <>
-          {icon && <div className="mb-4 p-3 rounded-full">{icon}</div>}
+        <div className="min-h-80 flex flex-col items-center justify-center">
+          {icon && <div className="mb-4 p-3 mx-auto text-center ">{icon}</div>}
           <H3 className="text-xl font-semibold mb-2 text-white">{title}</H3>
-          <P className="text-gray-300">{description}</P>
-        </>
+          <P className="text-gray-300 tracking-wide text-balance mx-auto">
+            {description}
+          </P>
+        </div>
       )}
     </div>
   );
@@ -131,16 +148,20 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
       <MaxWidthWrapper>
-        <div className="bg-[#28214c] p-10 rounded-4xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-items-center gap-4">
+        <div className="p-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-items-center">
             {features.map((feature, index) => (
               <div
                 key={feature.title}
                 className={twMerge(
-                  feature[index] === index && "border-r border-zinc-400"
+                  feature[index] === index && "border-r border-zinc-400 "
                 )}
               >
-                <Feature key={feature.title} {...feature} />
+                <Feature
+                  key={feature.title}
+                  {...feature}
+                  total={features.length}
+                />
               </div>
             ))}
           </div>

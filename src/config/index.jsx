@@ -2,6 +2,7 @@ import {
   Check,
   CheckCircle,
   Clock7,
+  HandCoins,
   Handshake,
   User,
   Users,
@@ -107,6 +108,7 @@ export const features = [
     title: "Why Choose Us",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
+    className: "rounded-l-4xl border-r border-zinc-600/80 text-center",
   },
   {
     title: "Save Your Time",
@@ -119,12 +121,15 @@ export const features = [
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
     highlight: true,
+    icon: <HandCoins size={48} className="text-[#28214c]" />,
+    className: "rounded-4xl",
   },
   {
     title: "Best Strategy",
     description:
       "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incidiu ",
     icon: <BiBulb size={48} className="text-[#ff6400]" />,
+    className: "rounded-r-4xl",
   },
 ];
 
