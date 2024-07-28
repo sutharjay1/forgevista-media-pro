@@ -413,7 +413,7 @@ const Home = () => {
             <div className="w-full">
               <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                 <Motion direction="up" duration={1.8} up={120}>
-                  <div className="grid grid-cols-1 gap-4 md:gap-0  lg:grid-cols-3 sm:items-center">
+                  <div className="grid grid-cols-1 gap-4 lg:gap-0  lg:grid-cols-3 sm:items-center">
                     {pricing.map((item, index) => (
                       <div
                         className={
@@ -661,35 +661,35 @@ const Home = () => {
                 <div className="flex items-center justify-center col-span-1 md:col-span-1">
                   <div className="p-6 rounded-lg shadow-md flex flex-col items-center justify-start gap-4">
                     <div className="w-full flex flex-col items-center text-center space-y-4">
-                      <div className="w-full flex items-center justify-center">
+                      <div className="w-full flex items-center justify-center gap-2">
                         <H3 className="text-2xl font-bold text-[#ff6400]">
                           250%
                         </H3>
-                        <P className="text-lg text-gray-600 mt-1">
+                        <P className="text-lg text-zinc-300 mt-1">
                           - Follower Growth
                         </P>
                       </div>
-                      <div className="flex flex-col items-center">
+                      <div className="w-full flex items-center justify-center gap-2">
                         <H3 className="text-2xl font-bold text-[#ff6400]">
                           80%
                         </H3>
-                        <P className="text-lg text-gray-600 mt-1">
+                        <P className="text-lg text-zinc-300 mt-1">
                           - Increase Sales
                         </P>
                       </div>
-                      <div className="flex flex-col items-center">
+                      <div className="w-full flex items-center justify-center gap-2">
                         <H3 className="text-2xl font-bold text-[#ff6400]">
                           140%
                         </H3>
-                        <P className="text-lg text-gray-600 mt-1">
+                        <P className="text-lg text-zinc-300 mt-1">
                           - Total Engagement
                         </P>
                       </div>
-                      <div className="flex flex-col items-center">
+                      <div className="w-full flex items-center justify-center gap-2">
                         <H3 className="text-2xl font-bold text-[#ff6400]">
                           75%
                         </H3>
-                        <P className="text-lg text-gray-600 mt-1">
+                        <P className="text-lg text-zinc-300 mt-1">
                           - Income Growth
                         </P>
                       </div>
