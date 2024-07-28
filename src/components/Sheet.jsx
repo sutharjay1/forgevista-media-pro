@@ -52,7 +52,9 @@ const SheetContent = React.forwardRef(
         className={cn(sheetVariants(side), className)}
         {...props}
       >
-        <Motion>{children}</Motion>
+        <Motion direction="up" duration={0.8} up={80}>
+          {children}
+        </Motion>
         <SheetPrimitive.Close
           className="absolute right-4 top-4 inline-flex items-center justify-center rounded-md p-2 text-zinc-200  transition-all bg-[#28214c] hover:bg-[#ff6400] hover:text-zinc-800 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6400] disabled:pointer-events-none"
           onClick={close}
