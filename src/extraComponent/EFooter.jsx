@@ -248,13 +248,19 @@ import { Link } from "react-router-dom";
 import { H1 } from "../components/typographyh1";
 import { H4 } from "../components/typographyh4";
 import { P } from "../components/typographypara";
+import { twMerge } from "tailwind-merge";
 
-const EFooter = () => {
+const EFooter = ({ className }) => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-[#15242b]">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div
+        className={twMerge(
+          className,
+          "mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+        )}
+      >
         <div className="flex items-center justify-between gap-4 -mb-8">
           <H1 className="text-zinc-200 text-lg font-semibold">jobify</H1>
           <div className="flex space-x-4">

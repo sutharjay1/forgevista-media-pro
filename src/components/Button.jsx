@@ -12,6 +12,7 @@ const Button = ({
   text,
   href,
   containerWidth,
+  onClick,
 }) => {
   const baseClasses =
     "flex items-center justify-center gap-2 text-center font-semibold py-3 px-6 rounded-xl transition-colors duration-300";
@@ -33,7 +34,7 @@ const Button = ({
   );
 
   const content = (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       {children}
       {icon && <span className="ml-2">{icon}</span>}
     </button>
