@@ -19,13 +19,18 @@ const BlogCard = ({ title, description, img, date, href }) => {
       />
 
       <div className="mt-4">
-        <H2 className="text-xl font-bold text-zinc-900">{title}</H2>
+        <H2 className="text-xl font-bold text-zinc-900 hover:text-[#ff6400] transition-colors cursor-pointer">
+          {title}
+        </H2>
         <p className="text-sm text-gray-500 py-1">{formatDate(date)}</p>
         <H4 className="max-w-prose text-zinc-600 md:text-xl text-balance font-[400] ">
           {description}
         </H4>
       </div>
-      <Link to={href} className="block rounded-lg py-4">
+      <Link
+        to={href}
+        className="block rounded-lg py-4 hover:text-[#ff6400] transition-colors cursor-pointer"
+      >
         Read more <ArrowRight className="inline-block ml-2" />
       </Link>
     </div>

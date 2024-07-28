@@ -204,7 +204,7 @@ const Home = () => {
           </div>
         </div>
       </MaxWidthWrapper>
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-0  placeholderImage  bg-[#1e193bfb] bg-blend-multiply">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto   bg-[url('../assets/placeholder.png')]   bg-[#1e193bfb] bg-blend-multiply">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
@@ -516,7 +516,8 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage bg-[#141025] bg-blend-overlay pb-8">
+      {/* <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bgImage bg-[#141025] bg-blend-overlay pb-8"> */}
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bg-[url('../assets/bg-footer.png')] bg-[#141025] bg-blend-overlay  pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex flex-col items-center mx-auto">
           <div className="w-full">
             {/* Header Section */}
@@ -609,7 +610,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-44 lg:pt-48 pb-8">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-12  lg:pt-8 pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">

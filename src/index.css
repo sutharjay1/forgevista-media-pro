@@ -1,4 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,12 +98,23 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "PolySans", sans-serif;
+  font-family: "PolySansSlim", sans-serif;
   background-color: #fff;
 }
 
 @font-face {
   font-family: "PolySans";
   src: url('./assets/font/PolySans-Median.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansSlim";
+  src: url('./assets/font/PolySans-Slim.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansNeutral";
+  src: url('./assets/font/PolySans-Neutral.woff2') format("woff2");
 }
 
 
@@ -124,14 +137,25 @@ body {
 
 
 
+
+
 @media screen and (max-width: 1024px) {
   .placeholderImage {
     height: 1250px;
   }
+
+  .bgImage {
+    height: 500px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
   .placeholderImage {
     height: 2325px;
+  }
+
+  .bgImage {
+    height: 500px;
   }
 }
