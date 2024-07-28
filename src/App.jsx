@@ -9,6 +9,7 @@ import "./assets/font/PolySans-Median.woff2";
 import "./assets/font/PolySans-Slim.woff2";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ExtraComponent from "./page/ExtraComponent";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ export const AppRouter = () => {
       <Route path="/projects" element={<Projects />} />
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/extra-component" element={<ExtraComponent />} />
     </Routes>
   );
 };
