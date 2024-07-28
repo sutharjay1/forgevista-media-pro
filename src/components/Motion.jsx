@@ -1,48 +1,51 @@
-import { motion } from "framer-motion";
-import { useMemo } from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useMemo, useRef } from "react";
 
 export function Motion({
-  direction = "left",
+  direction = "up",
   className,
-  framerProps = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { type: "spring" } },
-  },
+  framerProps,
+  text,
+  useInViewProp = true,
+  inViewMargin = "-100px",
   children,
+  duration = 1.3,
 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: inViewMargin });
+
   const directionOffset = useMemo(() => {
-    const map = { up: 10, down: -10, left: -10, right: 10 };
+    const map = { up: 50, down: -50, left: -90, right: 90 };
     return map[direction];
   }, [direction]);
 
   const axis = direction === "up" || direction === "down" ? "y" : "x";
 
-  const FADE_ANIMATION_VARIANTS = useMemo(() => {
-    const { hidden, show, ...rest } = framerProps;
+  const defaultFramerProps = {
+    hidden: { opacity: 0, [axis]: directionOffset },
+    visible: {
+      opacity: 1,
+      [axis]: 0,
+      transition: { type: "spring", duration: duration },
+    },
+  };
 
-    return {
-      ...rest,
-      hidden: {
-        ...(hidden ?? {}),
-        opacity: hidden?.opacity ?? 0,
-        [axis]: hidden?.[axis] ?? directionOffset,
-      },
-      show: {
-        ...(show ?? {}),
-        opacity: show?.opacity ?? 1,
-        [axis]: show?.[axis] ?? 0,
-      },
-    };
-  }, [directionOffset, axis, framerProps]);
+  const FADE_ANIMATION_VARIANTS = useMemo(
+    () => ({
+      ...defaultFramerProps,
+      ...framerProps,
+    }),
+    [framerProps, defaultFramerProps]
+  );
 
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      animate="show"
-      viewport={{ once: true }}
+      animate={useInViewProp && isInView ? "visible" : "hidden"}
       variants={FADE_ANIMATION_VARIANTS}
     >
-      <motion.span className={className}>{children}</motion.span>
+      {children ? children : <span className={className}>{text}</span>}
     </motion.div>
   );
 }
