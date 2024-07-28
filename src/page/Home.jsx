@@ -208,10 +208,12 @@ const Home = () => {
                     key={index}
                     className="flex items-center gap-4 translate-x-2 md:translate-x-6 px-4 py-3 bg-[#edeaff] rounded-5xl"
                   >
-                    <CheckCircle
-                      className="p-3 mx-auto text-[#a5a3ef] bg-zinc-50  rounded-full"
-                      size={12}
-                    />
+                    <span className="p-2">
+                      <CheckCircle
+                        className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50  rounded-full"
+                        size={12}
+                      />
+                    </span>
                     <div>
                       <H2 className="text-xl md:text-2xl lg:text-3xl border-none font-semibold">
                         {feature.title}
@@ -221,10 +223,12 @@ const Home = () => {
                   </div>
                 ) : (
                   <div key={index} className="flex items-center gap-4">
-                    <CheckCircle
-                      className="p-3 mx-auto size-14 text-[#a5a3ef] bg-[#e6e5ff] rounded-full"
-                      // size={48}
-                    />
+                    <span className="p-2">
+                      <CheckCircle
+                        className="p-3 mx-auto size-14 text-[#a5a3ef] bg-[#e6e5ff] rounded-full"
+                        size={12}
+                      />
+                    </span>
                     <div>
                       <H2 className="text-xl md:text-2xl lg:text-3xl border-none font-semibold">
                         {feature.title}
