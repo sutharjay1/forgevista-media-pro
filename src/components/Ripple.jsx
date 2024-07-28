@@ -180,7 +180,7 @@ const Ripple = React.memo(function Ripple({
           </Motion>
           <Motion
             direction="down"
-            className="absolute top-6 sm:top-24 lg:top-36 -right-[3.7rem]   sm:-right-32 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute top-6 sm:top-24 lg:top-20 -right-[3.7rem]   sm:-right-32 lg:-right-24 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <ChartIcon />
           </Motion>
