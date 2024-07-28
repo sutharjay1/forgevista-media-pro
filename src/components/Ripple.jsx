@@ -88,20 +88,20 @@ const Ripple = React.memo(function Ripple({
             iconDegrees={[0, 50, 175, 210, 240, 270, 315]}
           >
             <span className="p-2 z-10">
-              <IoLogoInstagram className="text-white size-14 lg:size-70 bg-gradient-to-tr from-pink-500 to-violet-500 rounded-full p-2 z-20 " />
+              <IoLogoInstagram className="text-white size-14  bg-gradient-to-tr from-pink-500 to-violet-500 rounded-full p-2 z-20 " />
             </span>
             <span className="p-5">
-              <IoLogoTwitter className="text-white size-12 lg:size-60 bg-[#1da1f2] rounded-full p-2" />
+              <IoLogoTwitter className="text-white size-12 bg-[#1da1f2] rounded-full p-2" />
             </span>
 
             <span className="p-5">
-              <IoLogoTiktok className="text-white size-10 lg:size-60 bg-zinc-900 rounded-full p-2" />
+              <IoLogoTiktok className="text-white size-10 bg-zinc-900 rounded-full p-2" />
             </span>
             <span className="p-5">
-              <IoLogoYoutube className="text-white size-10 lg:size-60 bg-[#ff0000] rounded-full p-2" />
+              <IoLogoYoutube className="text-white size-10 bg-[#ff0000] rounded-full p-2" />
             </span>
             <span className="p-5">
-              <FaFacebookF className="text-white size-12 lg:size-60 bg-[#1078f0] rounded-full p-3" />
+              <FaFacebookF className="text-white size-12 bg-[#1078f0] rounded-full p-3" />
             </span>
           </OrbitingApp>
           <Motion

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export default function OrbitingApp({
@@ -12,6 +12,16 @@ export default function OrbitingApp({
   path = true,
   iconDegrees = [], // Array to specify the degree of each icon
 }) {
+  const [rootRadius, setRootRadius] = useState(radius);
+  if (mobileRadius) {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 768) {
+        setRootRadius(mobileRadius);
+      } else {
+        setRootRadius(radius);
+      }
+    });
+  }
   return (
     <>
       {path && (
@@ -24,7 +34,7 @@ export default function OrbitingApp({
             className={`stroke-black/10 stroke-1  dark:stroke-white/10`}
             cx="50%"
             cy="50%"
-            r={mobileRadius ? mobileRadius : radius}
+            r={rootRadius}
             fill="none"
           />
         </svg>
@@ -40,8 +50,8 @@ export default function OrbitingApp({
         {React.Children.map(children, (child, index) => {
           const degree = iconDegrees[index] || (360 / children.length) * index;
           const radian = (degree * Math.PI) / 180;
-          const x = (mobileRadius ? mobileRadius : radius) * Math.cos(radian);
-          const y = (mobileRadius ? mobileRadius : radius) * Math.sin(radian);
+          const x = rootRadius * Math.cos(radian);
+          const y = rootRadius * Math.sin(radian);
 
           return (
             <div
