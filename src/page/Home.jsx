@@ -93,12 +93,11 @@ const Home = () => {
                 Welcome To Socialzy
               </Badge>
             </Motion>
-            <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">Discover the Future of</span>{" "}
-              <span className="block text-indigo-600 xl:inline">
+            <H1 className="text-4xl text-center lg:text-left tracking-normal font-extrabold sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+              <span className="block text-zinc-900 xl:inline">
                 Welcome to Our Website MediaPro
               </span>
-            </h1>
+            </H1>
             <Motion direction="left">
               <P className="mt-3 text-base font-medium   text-zinc-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 Empower your team to build and deploy faster with our
