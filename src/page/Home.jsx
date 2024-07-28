@@ -78,7 +78,7 @@ const Home = () => {
               presence.
             </P>
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <div className="flex flex-row items-center justify-center lg:justify-start gap-4 my-auto mx-auto">
+              <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 my-auto mx-auto">
                 <Button
                   bg
                   href="/get-started"
