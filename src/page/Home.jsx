@@ -161,7 +161,7 @@ const Home = () => {
                 colors={["#50497b", "#3d3568"]}
               >
                 <img
-                  className="w-auto lg:w-full h-96 lg:h-auto z-30 rounded-lg bg-blend-multiply"
+                  className="w-auto lg:w-full h-96 lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
                   src="./assets/hero-section-girl.png"
                   alt="App screenshot"
                 />
@@ -171,7 +171,7 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="pt-5">
+      <MaxWidthWrapper className="pt-[5rem]">
         <div className="p-4 sm:p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
             {features.map((feature, index) => (
@@ -190,11 +190,17 @@ const Home = () => {
       <MaxWidthWrapper className="pt-5  ">
         <div className="grid grid-flow-dense items-center gap-x-12 place-items-center lg:grid-cols-2 pb-8">
           <div className="h-full  w-full flex items-center justify-center">
-            <img
-              src="https://images.unsplash.com/photo-1720451815682-3353b81a6633?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Feature"
-              className="mx-auto w-full h-[75%] overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            <Ripple
+              mainCircleSize={240}
+              numCircles={5}
+              colors={["#50497b", "#3d3568"]}
+            >
+              <img
+                className="w-auto lg:w-full h-96 lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
+                src="./assets/hero-section-girl.png"
+                alt="App screenshot"
+              />
+            </Ripple>
           </div>
           <div className="space-y-4">
             <Motion direction="right">

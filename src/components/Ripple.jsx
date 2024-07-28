@@ -44,7 +44,8 @@ const Ripple = React.memo(function Ripple({
           <>
             <div
               key={i}
-              className={`absolute animate-ripple z-10 rounded-full shadow-xl [--i:${i}]`}
+              // className animate-ripple
+              className={`absolute  z-10 rounded-full shadow-xl [--i:${i}]`}
               style={{
                 width: `${size}px`,
                 height: `${size}px`,
@@ -62,7 +63,7 @@ const Ripple = React.memo(function Ripple({
       <Circle
         strokeWidth={0.03}
         strokeDasharray={0.3}
-        className={`absolute z-30 w-[40rem] h-[40rem] rounded-full`}
+        className={`absolute z-30 w-[42rem] h-[42rem] rounded-full`}
         style={{
           top: "50%",
           left: "50%",
@@ -71,16 +72,16 @@ const Ripple = React.memo(function Ripple({
       />
       <OrbitingApp
         className="size-[50px] border-none bg-transparent"
-        radius={265}
+        radius={280}
         duration={20}
         delay={0}
         reverse
-        iconDegrees={[0, 50, 175, 210, 250, 270, 315]}
+        iconDegrees={[0, 50, 175, 210, 240, 270, 315]}
       >
-        <span className="p-5">
+        <span className="p-2 z-10">
           <IoLogoInstagram
             size={70}
-            className="text-white bg-gradient-to-tr from-pink-500 to-violet-500 rounded-full p-2"
+            className="text-white bg-gradient-to-tr from-pink-500 to-violet-500 rounded-full p-2 z-20 "
           />
         </span>
         <span className="p-5">
