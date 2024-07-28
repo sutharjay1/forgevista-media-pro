@@ -64,7 +64,7 @@ const Header = () => {
               {menuOptions.map((option) => (
                 <div key={option.path} className="relative group">
                   <Link
-                    to={option.path}
+                    to={option.submenu ? null : option.path}
                     className={`text-base font-light ${
                       option.path === location.pathname
                         ? "text-[#ff6400] font-semibold"
@@ -75,7 +75,7 @@ const Header = () => {
                     {option.submenu && <BiChevronDown className="ml-1" />}
                   </Link>
                   {option.submenu && (
-                    <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                    <div className="absolute left-0 mt-3  p-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                       <div
                         className="py-1"
                         role="menu"
@@ -86,7 +86,7 @@ const Header = () => {
                           <Link
                             key={subItem.path}
                             to={subItem.path}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            className="block px-4 py-3 text-sm text-gray-600 hover:text-[#ff6400] hover:bg-zinc-200 rounded-lg"
                             role="menuitem"
                           >
                             {subItem.title}
@@ -122,7 +122,7 @@ const Header = () => {
         <SheetContent
           side="left"
           // close={handleMenu}
-          className="bg-zinc-50  w-full h-full"
+          className="bg-zinc-50  w-full h-full p-3"
         >
           <SheetHeader>
             <SheetTitle>
@@ -136,17 +136,17 @@ const Header = () => {
               </Link>
             </SheetTitle>
           </SheetHeader>
-          <div className="flex  flex-col h-full ">
-            <nav className="flex-1 mt-6 grid gap-y-4">
+          <div className="flex  flex-col h-full  ">
+            <nav className="flex-1 mt-6 grid gap-y-4 pt-4 ">
               {menuOptions.map((option) => (
                 <div key={option.path}>
                   <div
                     onClick={() => handleMenuClick(option)}
-                    className={`flex items-center justify-between rounded-md p-3 text-sm font-semibold ${
+                    className={`flex items-center justify-between rounded-md p-1 py-2 pb-3 px-2 text-sm font-semibold ${
                       option.path === location.pathname
                         ? "text-[#ff6400] underline underline-offset-8 font-bold"
                         : "text-zinc-800"
-                    } hover:bg-gray-100`}
+                    } hover:bg-zinc-200`}
                   >
                     <span className="ml-3 text-base font-normal">
                       {option.title}
@@ -168,7 +168,7 @@ const Header = () => {
                           key={subItem.path}
                           to={subItem.path}
                           onClick={() => setIsOpen(false)}
-                          className="block p-2 text-sm text-gray-600 hover:text-[#ff6400]"
+                          className="block p-2 text-sm text-gray-600 hover:text-[#ff6400] hover:bg-zinc-200 rounded-md"
                         >
                           {subItem.title}
                         </Link>
