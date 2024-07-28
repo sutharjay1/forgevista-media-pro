@@ -80,8 +80,8 @@ const Feature = ({
 };
 
 const Home = () => {
-  const serviceOne = serviceFeatures.slice(0, 3);
-  const serviceTwo = serviceFeatures.slice(3, 6);
+  const serviceOne = serviceFeatures.slice(0, 2);
+  const serviceTwo = serviceFeatures.slice(2, 5);
 
   return (
     <>

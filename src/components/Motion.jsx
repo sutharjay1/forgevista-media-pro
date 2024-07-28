@@ -9,7 +9,7 @@ export function Motion({
   useInViewProp = true,
   inViewMargin = "-100px",
   children,
-  duration = 1.3,
+  duration = 1.7,
   up = 100,
 }) {
   const ref = useRef(null);
