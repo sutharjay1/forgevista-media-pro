@@ -15,7 +15,9 @@ import { ArrowRight } from "lucide-react";
 import { FaPhone } from "react-icons/fa";
 
 const Header = () => {
-  const pathname = useLocation();
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
   const menuOptions = [
     { title: "Home", path: "/" },
     { title: "About", path: "/about" },
@@ -25,19 +27,13 @@ const Header = () => {
     { title: "Contact", path: "/contact" },
   ];
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
-
   useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="relative w-full z-20">
-      <Sheet>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <div className="w-full flex items-center justify-center py-4 px-4 z-20 pt-4 ">
           <div className="max-w-6xl w-full flex items-center justify-between">
             <div className="text-xl font-semibold tracking-wide select-none">
@@ -55,7 +51,7 @@ const Header = () => {
                   <Link to={option.path} key={option.path}>
                     <span
                       className={`text-base font-light ${
-                        option.path === pathname.pathname
+                        option.path === location.pathname
                           ? "text-[#ff6400] font-semibold"
                           : `text-[${colorTheme.lightZinc}]`
                       }`}
@@ -79,24 +75,22 @@ const Header = () => {
               (+44) 123 456 789
             </Button>
 
-            <div className="flex lg:hidden items-center justify-center gap-12">
-              <span onClick={handleMenu}>
-                <SheetTrigger>
-                  <CgMenuGridO size={32} />
-                </SheetTrigger>
-              </span>
-            </div>
+            <SheetTrigger asChild className="lg:hidden">
+              <button onClick={() => setIsOpen(true)} aria-label="Open menu">
+                <CgMenuGridO size={32} />
+              </button>
+            </SheetTrigger>
           </div>
         </div>
         <SheetContent
           side="left"
-          close={handleMenu}
+          // close={handleMenu}
           className="backdrop-blur-xl"
         >
           <SheetHeader>
             <SheetTitle>
               {" "}
-              <Link to={"/"}>
+              <Link to={"/"} onClick={() => setIsOpen(false)}>
                 <img
                   src="../assets/Logo.png"
                   className="mx-auto h-6 w-auto object-cover"
@@ -112,8 +106,9 @@ const Header = () => {
                   <Link
                     to={option.path}
                     key={option.path}
+                    onClick={() => setIsOpen(false)}
                     className={`-m-3 flex items-center rounded-md p-3 text-sm font-semibold ${
-                      option.path === pathname.pathname
+                      option.path === location.pathname
                         ? "text-[#ff6400] underline underline-offset-8 font-bold"
                         : `text-zinc-800`
                     }`}
@@ -130,7 +125,7 @@ const Header = () => {
             </div>
             <div className="mt-3 space-y-2">
               <div className="space-y-1 w-full">
-                <Link to={"/auth?mode=signup"}>
+                <Link to={"/auth?mode=signup"} onClick={() => setIsOpen(false)}>
                   <button
                     type="button"
                     className="w-full rounded-md border border-[#ff6400] px-3 py-[0.5rem] text-sm font-semibold text-[#ff6400] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6400]"
@@ -140,7 +135,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="space-y-1 w-full">
-                <Link to={"/auth?mode=login"}>
+                <Link to={"/auth?mode=login"} onClick={() => setIsOpen(false)}>
                   <button
                     type="button"
                     className="w-full rounded-md bg-[#ff6400] px-3 py-[0.5rem] text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6400]"
