@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 export const ChartIcon = () => (
   <div
     className={
-      "dark:shadow-none shadow-xl overflow-hidden rounded-xl bg-zinc-100 w-[200px] p-2"
+      "dark:shadow-none shadow-xl overflow-hidden rounded-xl bg-zinc-100 w-[135px] sm:w-[200px] p-2"
     }
   >
-    <div className={"absolute p-2 z-40 text-neutral-900"}>
+    <div className={"absolute p-1 sm:p-2 z-40 text-neutral-900"}>
       <div className={"font-medium"}>Increase</div>
       <div className={"font-medium"}>Sales</div>
       <div
         className={
-          "w-full flex items-start  justify-end font-bold text-3xl text-right"
+          "w-full flex items-start  justify-end font-bold text-xl sm:text-3xl text-right"
         }
       >
         <span>+65.4%</span>

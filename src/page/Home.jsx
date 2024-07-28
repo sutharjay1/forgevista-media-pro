@@ -162,7 +162,7 @@ const Home = () => {
                 sectionOne
               >
                 <img
-                  className="w-auto lg:w-full h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
+                  className="w-auto lg:w-full h-[20rem] sm:h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
                   src="./assets/hero-section-girl.png"
                   alt="App screenshot"
                 />
@@ -188,8 +188,8 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="pt-5  ">
-        <div className="grid grid-flow-dense items-center gap-x-12 place-items-center lg:grid-cols-2 pb-8">
+      <MaxWidthWrapper className="pt-5 ">
+        <div className="grid grid-flow-dense items-center gap-x-12 gap-y-10 place-items-center lg:grid-cols-2 pb-8">
           <div className="h-full  w-full flex items-center justify-center">
             <Ripple
               mainCircleSize={525}
@@ -199,7 +199,7 @@ const Home = () => {
               sectionTwo
             >
               <img
-                className="w-auto lg:w-full h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
+                className="w-auto lg:w-full h-[20rem] sm:h-[36rem] lg:h-auto z-30 -mb-2 md:mb-14 rounded-lg bg-blend-multiply"
                 src="./assets/hero-section-boy.png"
                 alt="App screenshot"
               />

@@ -8,6 +8,7 @@ export default function OrbitingApp({
   duration = 20,
   delay = 10,
   radius = 50,
+  mobileRadius = 30,
   path = true,
   iconDegrees = [], // Array to specify the degree of each icon
 }) {
@@ -20,10 +21,10 @@ export default function OrbitingApp({
           className="pointer-events-none absolute inset-0 size-full"
         >
           <circle
-            className="stroke-black/10 stroke-1 dark:stroke-white/10"
+            className={`stroke-black/10 stroke-1  dark:stroke-white/10`}
             cx="50%"
             cy="50%"
-            r={radius}
+            r={mobileRadius ? mobileRadius : radius}
             fill="none"
           />
         </svg>
@@ -39,8 +40,8 @@ export default function OrbitingApp({
         {React.Children.map(children, (child, index) => {
           const degree = iconDegrees[index] || (360 / children.length) * index;
           const radian = (degree * Math.PI) / 180;
-          const x = radius * Math.cos(radian);
-          const y = radius * Math.sin(radian);
+          const x = (mobileRadius ? mobileRadius : radius) * Math.cos(radian);
+          const y = (mobileRadius ? mobileRadius : radius) * Math.sin(radian);
 
           return (
             <div
