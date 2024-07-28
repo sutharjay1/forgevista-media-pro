@@ -680,7 +680,7 @@ const Home = () => {
                 {/* Image Section */}
                 <div className="shadow-md flex items-center justify-center order-1 md:order-2 md:col-span-1 col-span-1">
                   <img
-                    src="https://images.unsplash.com/photo-1721548902888-36f759c71727?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://images.unsplash.com/photo-1524799526615-766a9833dec0?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     className="w-[85%] h-96 object-cover rounded-3xl"
                     alt="image"
                   />
