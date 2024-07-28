@@ -159,6 +159,7 @@ const Home = () => {
                 mainCircleSize={240}
                 numCircles={5}
                 colors={["#50497b", "#3d3568"]}
+                sectionOne
               >
                 <img
                   className="w-auto lg:w-full h-96 lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
@@ -191,13 +192,15 @@ const Home = () => {
         <div className="grid grid-flow-dense items-center gap-x-12 place-items-center lg:grid-cols-2 pb-8">
           <div className="h-full  w-full flex items-center justify-center">
             <Ripple
-              mainCircleSize={240}
-              numCircles={5}
-              colors={["#50497b", "#3d3568"]}
+              mainCircleSize={525}
+              mainCircleOpacity={0}
+              numCircles={1}
+              colors={["#ffc29a"]}
+              sectionTwo
             >
               <img
                 className="w-auto lg:w-full h-96 lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
-                src="./assets/hero-section-girl.png"
+                src="./assets/hero-section-boy.png"
                 alt="App screenshot"
               />
             </Ripple>
