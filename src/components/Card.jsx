@@ -12,10 +12,10 @@ const Card = ({ title, description, img }) => {
             className="absolute inset-0 w-full h-full object-cover "
           />
         </div>
-        <div className="relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-25 group-hover:bg-[#ff6400] transition-opacity group-hover:bg-opacity-50 flex flex-col justify-end min-h-[28rem] h-full">
+        <div className="relative px-6 py-10 sm:p-6 sm:py-10 lg:p-8 lg:py-12 bg-black bg-opacity-25 group-hover:bg-[#ff6400] transition-opacity group-hover:bg-opacity-50 flex flex-col justify-end min-h-[28rem] h-full">
           <div className="mt-8 transform opacity-0  transition-all group-hover:translate-y-0 group-hover:opacity-100 space-y-4">
-            <p className="text-xl font-bold text-white sm:text-2xl">{title}</p>
-            <p className="text-sm text-white">{description}</p>
+            <p className="text-2xl font-bold text-white">{title}</p>
+            <p className="text-sm sm:text-base text-white">{description}</p>
           </div>
         </div>
       </div>
