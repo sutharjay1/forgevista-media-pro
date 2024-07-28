@@ -23,9 +23,9 @@ const BlogCard = ({ title, description, img, date, href }) => {
           {title}
         </H2>
         <p className="text-sm text-gray-500 py-1">{formatDate(date)}</p>
-        <H4 className="max-w-prose text-zinc-600 md:text-xl text-balance font-[400] ">
+        <P className="max-w-prose text-zinc-600 md:text-xl text-balance font-[400] ">
           {description}
-        </H4>
+        </P>
       </div>
       <Link
         to={href}
