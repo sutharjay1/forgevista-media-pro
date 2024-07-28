@@ -386,7 +386,7 @@ const Home = () => {
 
             <div className="w-full">
               <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-                <Motion direction="up" duration={1.8}>
+                <Motion direction="up" duration={1.8} up={120}>
                   <div className="grid grid-cols-1 gap-4 md:gap-0  lg:grid-cols-3 sm:items-center">
                     {pricing.map((item, index) => (
                       <div
@@ -633,7 +633,7 @@ const Home = () => {
               </div>
             </div>
 
-            <Motion direction="up" duration={1.8}>
+            <Motion direction="up" duration={1.8} up={120}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full py-6">
                 {/* Stats Section */}
                 <div className="flex items-center justify-center col-span-1 md:col-span-1">

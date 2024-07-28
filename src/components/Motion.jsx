@@ -10,12 +10,13 @@ export function Motion({
   inViewMargin = "-100px",
   children,
   duration = 1.3,
+  up = 100,
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: inViewMargin });
 
   const directionOffset = useMemo(() => {
-    const map = { up: 50, down: -50, left: -90, right: 90 };
+    const map = { up: up, down: -50, left: -90, right: 90 };
     return map[direction];
   }, [direction]);
 
