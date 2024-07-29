@@ -9,6 +9,7 @@ import EJim from "../extraComponent/EJim";
 import EJobifyLandingPage from "../extraComponent/EJobifyLandingPage";
 import EWhyChooseUs from "../extraComponent/EWhyChooseUs";
 import GrowComponentHeroSection from "../extraComponent/GrowComponentHeroSection";
+import EFooterTwo from "../extraComponent/EFooterTwo";
 
 const ExtraComponent = () => {
   return (
@@ -23,6 +24,7 @@ const ExtraComponent = () => {
       <EContactForm />
       <EContactFormTwo />
       <EFooter />
+      <EFooterTwo />
     </>
   );
 };
