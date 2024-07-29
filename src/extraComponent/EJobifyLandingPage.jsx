@@ -239,10 +239,10 @@ export default function EJobifyLandingPage() {
               </Motion>
             </div>{" "}
           </div>
-          <div className="flex aspect-square lg:aspect-auto lg:h-[35rem] relative">
+          <div className="flex items-center justify-center aspect-square lg:aspect-auto lg:h-[35rem] relative">
             {" "}
             <Motion direction="right">
-              <div className="w-full h-auto rounded-3xl overflow-clip  z-30">
+              <div className="w-full h-[35rem] mx-auto  rounded-3xl overflow-clip  z-30">
                 <img
                   src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="buildind plan image"
