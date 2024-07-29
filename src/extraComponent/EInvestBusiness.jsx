@@ -7,20 +7,105 @@ import { H3 } from "../components/typographyh3";
 import Button from "../components/Button";
 import { H2 } from "../components/typographyh2";
 import { Check, CheckCircle } from "lucide-react";
+import { GrLineChart } from "react-icons/gr";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { PiPresentationChart } from "react-icons/pi";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaHouse } from "react-icons/fa6";
 
 const EInvestBusiness = () => {
   return (
-    <MaxWidthWrapper className="py-10 overflow-auto">
-      <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-2">
-        <div className="flex items-center justify-center aspect-square lg:h-[35rem] relative">
-          <Motion direction="left">
-            <div className="w-full lg:w-[35rem] h-[35rem] mx-auto  rounded-3xl overflow-clip  z-30">
-              <img
-                src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="buildind plan image"
-                width={300}
-                className="w-full h-full object-cover z-30"
-              />
+    <MaxWidthWrapper className="py-10 px-0 overflow-auto">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-6 p-5 overflow-hidden">
+          <Motion
+            direction="left"
+            className="z-50 bg-zinc-50 border-[1px] border-zinc-400/20 rounded-3xl max-w-96 shadow-xl"
+          >
+            <div className="flex flex-col items-start justify-start px-6 py-6">
+              <span className="p-2 rounded-xl bg-[#65cdaa] mb-2">
+                <GiTakeMyMoney
+                  className="p-1 lg:p-3 mx-auto size-14 lg:size-16 text-zinc-200    "
+                  size={12}
+                />
+              </span>
+              <div className="w-full flex flex-col items-start text-left">
+                <H3 className="text-lg text-zinc-800 font-bold mb-2">
+                  Business Growth
+                </H3>
+                <p className="text-zinc-600 font-semibold font-polySans">
+                  Proident do ut ut ea excepteur pariatur aliqua sit aute.
+                  Laborum proident nostrud.
+                </p>
+              </div>
+            </div>
+          </Motion>
+          <Motion
+            direction="left"
+            className="z-50 bg-zinc-50/35 border-[1px] border-zinc-400/20 rounded-3xl max-w-96 shadow-xl    "
+          >
+            <div className="flex flex-col items-start justify-start px-6 py-6">
+              <span className="p-2 rounded-xl bg-[#908dde] mb-2">
+                <PiPresentationChart
+                  className="p-1 lg:p-3 mx-auto size-14 lg:size-16 text-zinc-200    "
+                  size={12}
+                />
+              </span>
+              <div className="w-full flex flex-col items-start text-left">
+                <H3 className="text-lg text-zinc-800 font-bold mb-2">
+                  Strategic Guidance
+                </H3>
+                <p className="text-zinc-600 font-semibold font-polySans">
+                  Proident do ut ut ea excepteur pariatur aliqua sit aute.
+                  Laborum proident nostrud.
+                </p>
+              </div>
+            </div>
+          </Motion>
+
+          <Motion
+            direction="left"
+            className="z-50 bg-zinc-50/35 border-[1px] border-zinc-400/20 rounded-3xl max-w-96 shadow-xl "
+          >
+            <div className="flex flex-col items-start justify-start px-6 py-6">
+              <span className="p-2 rounded-xl bg-[#908dde] mb-2">
+                <IoSettingsOutline
+                  className="p-1 lg:p-3 mx-auto size-14 lg:size-16 text-zinc-200    "
+                  size={12}
+                />
+              </span>
+              <div className="w-full flex flex-col items-start text-left">
+                <H3 className="text-lg text-zinc-800 font-bold mb-2">
+                  Exit Strategy
+                </H3>
+                <p className="text-zinc-600 font-semibold font-polySans">
+                  Proident do ut ut ea excepteur pariatur aliqua sit aute.
+                  Laborum proident nostrud.
+                </p>
+              </div>
+            </div>
+          </Motion>
+
+          <Motion
+            direction="left"
+            className="z-50 bg-zinc-50 border-[1px] border-zinc-400/20 rounded-3xl max-w-96 shadow-xl"
+          >
+            <div className="flex flex-col items-start justify-start px-6 py-6">
+              <span className="p-2 rounded-xl bg-[#65cdaa] mb-2">
+                <FaHouse
+                  className="p-1 lg:p-3 mx-auto size-14 lg:size-16 text-zinc-200    "
+                  size={12}
+                />
+              </span>
+              <div className="w-full flex flex-col items-start text-left">
+                <H3 className="text-lg text-zinc-800 font-bold mb-2">
+                  Advising Startups
+                </H3>
+                <p className="text-zinc-600 font-semibold font-polySans">
+                  Proident do ut ut ea excepteur pariatur aliqua sit aute.
+                  Laborum proident nostrud.
+                </p>
+              </div>
             </div>
           </Motion>
         </div>
