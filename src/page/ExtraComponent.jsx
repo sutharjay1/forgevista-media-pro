@@ -10,6 +10,7 @@ import EIntroduction from "../extraComponent/EIntroduction";
 import EWhyChooseUs from "../extraComponent/EWhyChooseUs";
 import EJim from "../extraComponent/EJim";
 import GrowComponentHeroSection from "../extraComponent/GrowComponentHeroSection";
+import EInvestBusiness from "../extraComponent/EInvestBusiness";
 
 const ExtraComponent = () => {
   const components = [
@@ -37,6 +38,7 @@ const ExtraComponent = () => {
       <EIntroduction />
       <EJim />
       <GrowComponentHeroSection />
+      <EInvestBusiness />
       <EContactForm />
       <EFooter />
     </>
