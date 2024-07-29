@@ -83,190 +83,195 @@ const Home = () => {
 
   return (
     <>
-      <MaxWidthWrapper className="pt-10">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8 place-items-center">
-          <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <Motion direction="left">
-              <Badge className="inline-block uppercase tracking-wide">
-                Welcome To Socialzy
-              </Badge>
-            </Motion>
-            <H1 className="text-4xl text-center lg:text-left tracking-normal font-extrabold sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block text-zinc-900 xl:inline">
-                Welcome to Our Website MediaPro
-              </span>
-            </H1>
-            <Motion direction="left">
-              <P className="mt-3 text-base font-medium   text-zinc-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Empower your team to build and deploy faster with our
-                cutting-edge platform. Unlock new possibilities and
-                revolutionize your web presence.
-              </P>
-            </Motion>
+      <MaxWidthWrapper className="max-w-full w-full pt-10">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8 place-items-center">
+            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+              <Motion direction="left">
+                <Badge className="inline-block uppercase tracking-wide">
+                  Welcome To Socialzy
+                </Badge>
+              </Motion>
+              <H1 className="text-4xl text-center lg:text-left tracking-normal font-extrabold sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+                <span className="block text-zinc-900 xl:inline">
+                  Welcome to Our Website MediaPro
+                </span>
+              </H1>
+              <Motion direction="left">
+                <P className="mt-3 text-base font-medium   text-zinc-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  Empower your team to build and deploy faster with our
+                  cutting-edge platform. Unlock new possibilities and
+                  revolutionize your web presence.
+                </P>
+              </Motion>
 
-            <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 my-auto mx-auto">
-                <Motion direction="left">
-                  <Button
-                    bg
-                    href="/get-started"
-                    className={
-                      "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
-                    }
-                    icon={<ArrowRight size={16} />}
-                  >
-                    Get Started
-                  </Button>
-                </Motion>
-                <Motion direction="right">
-                  <Button
-                    border
-                    href="/watch-intro"
-                    // className={
-                    //   "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
-                    // }
-                    className={" px-6 py-4"}
-                    icon={<PlayCircle size={16} />}
-                  >
-                    Watch Intro
-                  </Button>
-                </Motion>
+              <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 my-auto mx-auto">
+                  <Motion direction="left">
+                    <Button
+                      bg
+                      href="/get-started"
+                      className={
+                        "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
+                      }
+                      icon={<ArrowRight size={16} />}
+                    >
+                      Get Started
+                    </Button>
+                  </Motion>
+                  <Motion direction="right">
+                    <Button
+                      border
+                      href="/watch-intro"
+                      // className={
+                      //   "bg-[#3d3568]  hover:-translate-y-2 transition-all hover:bg-[#ff6400] rounded-full px-6 py-4"
+                      // }
+                      className={" px-6 py-4"}
+                      icon={<PlayCircle size={16} />}
+                    >
+                      Watch Intro
+                    </Button>
+                  </Motion>
+                </div>
+              </div>
+              <div className="mt-6">
+                <div className="flex items-center justify-center lg:justify-start">
+                  <AvatarCircles
+                    avatarUrls={[
+                      "https://i.pravatar.cc/300?img=1",
+                      "https://i.pravatar.cc/300?img=2",
+                      "https://i.pravatar.cc/300?img=3",
+                      "https://i.pravatar.cc/300?img=4",
+                    ]}
+                    // numPeople={1000}
+                  />
+                  <span className="ml-3 text-sm font-medium text-zinc-600">
+                    3460+ Satisfied Clients
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="mt-6">
-              <div className="flex items-center justify-center lg:justify-start">
-                <AvatarCircles
-                  avatarUrls={[
-                    "https://i.pravatar.cc/300?img=1",
-                    "https://i.pravatar.cc/300?img=2",
-                    "https://i.pravatar.cc/300?img=3",
-                    "https://i.pravatar.cc/300?img=4",
-                  ]}
-                  // numPeople={1000}
-                />
-                <span className="ml-3 text-sm font-medium text-zinc-600">
-                  3460+ Satisfied Clients
-                </span>
+            <div className="mt-8 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+              <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
+                <Ripple
+                  mainCircleSize={240}
+                  numCircles={5}
+                  colors={["#50497b", "#3d3568"]}
+                  sectionOne
+                >
+                  <img
+                    className="w-auto lg:w-full h-[20rem] sm:h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
+                    src="./assets/hero-section-girl.png"
+                    alt="App screenshot"
+                  />
+                </Ripple>
               </div>
             </div>
           </div>
-          <div className="mt-8 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
+        </MaxWidthWrapper>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper className="max-w-full w-full pt-[5rem] pb-6">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
+          <div className="p-1 sm:p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
+              {features.map((feature, index) => (
+                <div key={index}>
+                  <Feature
+                    key={feature.title}
+                    {...feature}
+                    total={features.length}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper className="max-w-full w-full pt-5 ">
+        <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
+          <div className="grid grid-flow-dense items-center gap-x-12 gap-y-10 place-items-center lg:grid-cols-2 pb-8">
+            <div className="h-full  w-full flex items-center justify-center">
               <Ripple
-                mainCircleSize={240}
-                numCircles={5}
-                colors={["#50497b", "#3d3568"]}
-                sectionOne
+                mainCircleSize={525}
+                mainCircleOpacity={0}
+                numCircles={1}
+                colors={["#ffc29a"]}
+                sectionTwo
               >
                 <img
-                  className="w-auto lg:w-full h-[20rem] sm:h-[36rem] lg:h-auto z-30 mb-14 rounded-lg bg-blend-multiply"
-                  src="./assets/hero-section-girl.png"
+                  className="w-auto lg:w-full h-[20rem] sm:h-[36rem] lg:h-auto z-30 -mb-2 md:mb-14 rounded-lg bg-blend-multiply"
+                  src="./assets/hero-section-boy.png"
                   alt="App screenshot"
                 />
               </Ripple>
             </div>
-          </div>
-        </div>
-      </MaxWidthWrapper>
-
-      <MaxWidthWrapper className="pt-[5rem] pb-6">
-        <div className="p-1 sm:p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
-            {features.map((feature, index) => (
-              <div key={index}>
-                <Feature
-                  key={feature.title}
-                  {...feature}
-                  total={features.length}
-                />
+            <div className="space-y-4">
+              <Motion direction="right">
+                <Badge className="inline-block uppercase tracking-wide">
+                  About Socialzy
+                </Badge>
+              </Motion>
+              <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                15 Years Of Experiences In Social Media Marekting
+              </H1>
+              <P className=" text-[#27272a]/80 md:text-xl text-balance">
+                Empower your team to build and deploy faster with our
+                cutting-edge platform. Unlock new possibilities and
+                revolutionize your web presence.
+              </P>
+              <div className="pt-5 space-y-6">
+                {aboutFeatures.map((feature, index) =>
+                  feature.highlight === true ? (
+                    <div
+                      key={index}
+                      className="flex items-center gap-4 translate-x-2 md:translate-x-6 px-4 py-3 bg-[#edeaff] rounded-5xl"
+                    >
+                      <span className="p-2">
+                        <CheckCircle
+                          className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50  rounded-full"
+                          size={12}
+                        />
+                      </span>
+                      <div>
+                        <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
+                          {feature.title}
+                        </H2>
+                        <P className="text-gray-500 tracking-wide leading-1 ">
+                          {feature.description}
+                        </P>
+                      </div>
+                    </div>
+                  ) : (
+                    <div key={index} className="flex items-center gap-4">
+                      <span className="p-2">
+                        <CheckCircle
+                          className="p-3 mx-auto size-14 text-[#a5a3ef] bg-[#e6e5ff] rounded-full"
+                          size={12}
+                        />
+                      </span>
+                      <div>
+                        <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
+                          {feature.title}
+                        </H2>
+                        <P className="text-gray-500 tracking-wide leading-1 ">
+                          {feature.description}
+                        </P>
+                      </div>
+                    </div>
+                  )
+                )}
               </div>
-            ))}
-          </div>
-        </div>
-      </MaxWidthWrapper>
-
-      <MaxWidthWrapper className="pt-5 ">
-        <div className="grid grid-flow-dense items-center gap-x-12 gap-y-10 place-items-center lg:grid-cols-2 pb-8">
-          <div className="h-full  w-full flex items-center justify-center">
-            <Ripple
-              mainCircleSize={525}
-              mainCircleOpacity={0}
-              numCircles={1}
-              colors={["#ffc29a"]}
-              sectionTwo
-            >
-              <img
-                className="w-auto lg:w-full h-[20rem] sm:h-[36rem] lg:h-auto z-30 -mb-2 md:mb-14 rounded-lg bg-blend-multiply"
-                src="./assets/hero-section-boy.png"
-                alt="App screenshot"
-              />
-            </Ripple>
-          </div>
-          <div className="space-y-4">
-            <Motion direction="right">
-              <Badge className="inline-block uppercase tracking-wide">
-                About Socialzy
-              </Badge>
-            </Motion>
-            <H1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              15 Years Of Experiences In Social Media Marekting
-            </H1>
-            <P className=" text-[#27272a]/80 md:text-xl text-balance">
-              Empower your team to build and deploy faster with our cutting-edge
-              platform. Unlock new possibilities and revolutionize your web
-              presence.
-            </P>
-            <div className="pt-5 space-y-6">
-              {aboutFeatures.map((feature, index) =>
-                feature.highlight === true ? (
-                  <div
-                    key={index}
-                    className="flex items-center gap-4 translate-x-2 md:translate-x-6 px-4 py-3 bg-[#edeaff] rounded-5xl"
-                  >
-                    <span className="p-2">
-                      <CheckCircle
-                        className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50  rounded-full"
-                        size={12}
-                      />
-                    </span>
-                    <div>
-                      <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
-                        {feature.title}
-                      </H2>
-                      <P className="text-gray-500 tracking-wide leading-1 ">
-                        {feature.description}
-                      </P>
-                    </div>
-                  </div>
-                ) : (
-                  <div key={index} className="flex items-center gap-4">
-                    <span className="p-2">
-                      <CheckCircle
-                        className="p-3 mx-auto size-14 text-[#a5a3ef] bg-[#e6e5ff] rounded-full"
-                        size={12}
-                      />
-                    </span>
-                    <div>
-                      <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
-                        {feature.title}
-                      </H2>
-                      <P className="text-gray-500 tracking-wide leading-1 ">
-                        {feature.description}
-                      </P>
-                    </div>
-                  </div>
-                )
-              )}
             </div>
           </div>
-        </div>
+        </MaxWidthWrapper>
       </MaxWidthWrapper>
-
+      {/* 
       <MaxWidthWrapper className="max-w-full w-full   py-4  bg-[url('../assets/placeholder.png')] bg-no-repeat bg-cover  bg-blend-multiply  h-[2600px] sm:h-[1550px] md:h-[1400px]  lg:h-[1000px] bg-[#1e193bfb] ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
-              {" "}
               <Motion direction="up">
                 <Badge className="inline-block uppercase tracking-wide">
                   Our Services
@@ -282,7 +287,6 @@ const Home = () => {
               </P>
             </div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-4 gap-y-4 pt-12">
-              {" "}
               <Motion direction="left">
                 <div className="w-full relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 min-h-[21.25rem]">
                   <img
@@ -382,8 +386,6 @@ const Home = () => {
                 );
               })}
             </div>
-
-            {/* </div> */}
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>
@@ -463,7 +465,7 @@ const Home = () => {
                           </ul>
                         </div>
                       </div>
-                    ))}{" "}
+                    ))}
                   </div>
                 </Motion>
               </div>
@@ -477,7 +479,6 @@ const Home = () => {
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
               <div className="space-y-4 flex flex-col items-center justify-center md:items-start  ">
-                {" "}
                 <Motion direction="left">
                   <Badge className="inline-block uppercase tracking-wide">
                     Our Projects
@@ -492,7 +493,7 @@ const Home = () => {
                   Empower your team to build and deploy faster with our
                   cutting-edge platform. Unlock new possibilities and
                   revolutionize your web presence.
-                </P>{" "}
+                </P>
                 <Button
                   bg
                   href="/projects"
@@ -550,7 +551,6 @@ const Home = () => {
         <div className="w-full ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
             <div className="space-y-4">
-              {" "}
               <Motion direction="left">
                 <Badge className="inline-block uppercase tracking-wide">
                   Achievement
@@ -563,7 +563,7 @@ const Home = () => {
                 Empower your team to build and deploy faster with our
                 cutting-edge platform. Unlock new possibilities and
                 revolutionize your web presence.
-              </P>{" "}
+              </P>
               <Button
                 bg
                 href="/projects"
@@ -617,12 +617,6 @@ const Home = () => {
                 />
               </div>
             ))}
-
-            {/* <img
-              src="./assets/partner-1.png"
-              alt="partner"
-              className="w-auto h-16 object-cover"
-            /> */}
           </div>
         </div>
       </MaxWidthWrapper>
@@ -630,10 +624,8 @@ const Home = () => {
       <MaxWidthWrapper className="max-w-full w-full mx-auto pt-5 lg:pt-8 bg-[url('../assets/bg-footer.png')] bg-[#141025] bg-blend-overlay brightness-75  pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex flex-col items-center mx-auto">
           <div className="w-full">
-            {/* Header Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center mb-8">
               <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
-                {" "}
                 <Motion direction="left">
                   <Badge className="inline-block uppercase tracking-wide">
                     Testimonials
@@ -654,7 +646,6 @@ const Home = () => {
 
             <Motion direction="up" duration={1.8} up={120}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full py-6">
-                {/* Stats Section */}
                 <div className="flex items-center justify-center col-span-1 md:col-span-1">
                   <div className="p-6 rounded-lg shadow-md flex flex-col items-center justify-start gap-4">
                     <div className="w-full flex flex-col items-center text-center space-y-4">
@@ -693,7 +684,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                {/* Image Section */}
+
                 <div className="shadow-md flex items-center justify-center order-1 md:order-2 md:col-span-1 col-span-1">
                   <img
                     src="https://images.unsplash.com/photo-1524799526615-766a9833dec0?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -701,7 +692,7 @@ const Home = () => {
                     alt="image"
                   />
                 </div>
-                {/* Testimonial Section */}
+
                 <div className="p-4 rounded shadow-md flex flex-col items-center justify-center order-2 md:order-3 md:col-span-1 col-span-1">
                   <H3 className="text-2xl font-bold text-center text-[#ff6400] mb-4">
                     Fantastic Job Done by Socialzy
@@ -726,7 +717,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>{" "}
+                </div>
               </div>
             </Motion>
           </div>
@@ -737,7 +728,6 @@ const Home = () => {
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
-              {" "}
               <Motion direction="up">
                 <Badge className="inline-block uppercase tracking-wide">
                   Our Blog
@@ -777,7 +767,7 @@ const Home = () => {
             />
           </div>
         </MaxWidthWrapper>
-      </MaxWidthWrapper>
+      </MaxWidthWrapper> */}
     </>
   );
 };

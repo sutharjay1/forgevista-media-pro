@@ -49,7 +49,7 @@ const Ripple = React.memo(function Ripple({
             <div
               key={i}
               // className animate-ripple
-              className={`absolute   z-10 w-[21rem] h-[21rem] sm:w-[32rem] sm:h-[32rem] lg:w-[${size}px] lg:h-[${size}px] rounded-full shadow-xl [--i:${i}]`}
+              className={`absolute   z-10 w-[20rem] h-[20rem] sm:w-[32rem] sm:h-[32rem] lg:w-[${size}px] lg:h-[${size}px] rounded-full shadow-xl [--i:${i}]`}
               style={{
                 // width: `${size}px`,
                 // height: `${size}px`,
@@ -178,7 +178,7 @@ const Ripple = React.memo(function Ripple({
           </Motion>
           <Motion
             direction="down"
-            className="absolute top-6 sm:top-24 lg:top-20 -right-[3.7rem]   sm:-right-32 lg:-right-24 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute top-6 sm:top-24 lg:top-20 -right-[3.5rem]   sm:-right-32 lg:-right-24 z-50 backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <ChartIcon />
           </Motion>
