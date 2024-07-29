@@ -48,7 +48,7 @@ const EInvestBusiness = () => {
             direction="right"
             className="my-4 flex justify-start items-center"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-start ">
               <div className="flex flex-col items-start justify-start">
                 <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold mb-4">
                   How we help your business
@@ -86,6 +86,19 @@ const EInvestBusiness = () => {
                   </div>
                 </div>
               </div>
+              <Motion
+                direction="right"
+                className="w-full hidden lg:flex items-center justify-center pl-10 pt-4"
+              >
+                <div className="w-52 h-52 flex items-center justify-end mx-auto  rounded-3xl overflow-clip  z-30">
+                  <img
+                    src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="buildind plan image"
+                    width={100}
+                    className="w-full h-full object-cover z-30"
+                  />
+                </div>
+              </Motion>
             </div>
           </Motion>{" "}
           <div className="flex flex-row items-center justify-start gap-0 w-full mt-4">
