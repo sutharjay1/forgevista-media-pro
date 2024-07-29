@@ -1,10 +1,10 @@
+import { ChevronRight, Mouse } from "lucide-react";
 import React from "react";
+import { IoIosArrowRoundDown } from "react-icons/io";
+import { IoLogoCodepen, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
+import Button from "./Button";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { Motion } from "./Motion";
-import Button from "./Button";
-import { P } from "./typographypara";
-import { ChevronRight } from "lucide-react";
-import { IoLogoCodepen, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 const EJim = () => {
   return (
@@ -22,8 +22,8 @@ const EJim = () => {
       </div>
 
       <MaxWidthWrapper className="relative px-4 md:px-6  py-4 sm:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 place-items-center">
-          <div className="flex flex-col space-y-6 text-left max-w-2xl mx-auto lg:text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 place-items-center lg:px-28">
+          <div className="flex flex-col space-y-6 text-left max-w-2xl mx-auto lg:text-left ">
             <Motion direction="left" className="w-full">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal leading-tight text-teal-950">
                 Hi, I'm Jim
@@ -42,7 +42,7 @@ const EJim = () => {
                 consequat.
               </p>
             </Motion>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+            <div className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full">
               <Motion direction="left">
                 <Button
                   bg
@@ -53,6 +53,10 @@ const EJim = () => {
                   <ChevronRight />
                 </Button>
               </Motion>
+            </div>
+            <div className="lg:absolute lg:bottom-20  flex items-center  justify-center lg:justify-start gap-2 ">
+              <Mouse className="size-6" />
+              Scroll down <IoIosArrowRoundDown className="size-5" />
             </div>
           </div>
           <div className="flex items-center justify-center aspect-square lg:h-[35rem] relative">
