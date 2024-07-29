@@ -83,7 +83,7 @@ const Home = () => {
 
   return (
     <>
-      <MaxWidthWrapper className="max-w-full w-full pt-10">
+      <MaxWidthWrapper className="pt-10">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 place-items-center">
             <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
@@ -171,7 +171,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full pt-[5rem] pb-6">
+      <MaxWidthWrapper className="pt-[5rem] pb-6">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="p-1 sm:p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
@@ -189,7 +189,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full pt-5 ">
+      <MaxWidthWrapper className="pt-5 ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="grid grid-flow-dense items-center gap-x-12 gap-y-10 place-items-center lg:grid-cols-2 pb-8">
             <div className="h-full  w-full flex items-center justify-center">
@@ -224,42 +224,46 @@ const Home = () => {
               <div className="pt-5 space-y-6">
                 {aboutFeatures.map((feature, index) =>
                   feature.highlight === true ? (
-                    <div
-                      key={index}
-                      className="flex items-center gap-4 translate-x-2 md:translate-x-6 px-4 py-3 bg-[#edeaff] rounded-5xl"
-                    >
-                      <span className="p-2">
-                        <CheckCircle
-                          className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50  rounded-full"
-                          size={12}
-                        />
-                      </span>
-                      <div>
-                        <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
-                          {feature.title}
-                        </H2>
-                        <P className="text-gray-500 tracking-wide leading-1 ">
-                          {feature.description}
-                        </P>
-                      </div>
-                    </div>
+                    <Motion direction="right">
+                      <div
+                        key={index}
+                        className="flex items-center gap-4 translate-x-2 md:translate-x-6 px-4 py-3 bg-[#edeaff] rounded-5xl"
+                      >
+                        <span className="p-2">
+                          <CheckCircle
+                            className="p-3 mx-auto size-14 text-[#a5a3ef] bg-zinc-50  rounded-full"
+                            size={12}
+                          />
+                        </span>
+                        <div>
+                          <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
+                            {feature.title}
+                          </H2>
+                          <P className="text-gray-500 tracking-wide leading-1 ">
+                            {feature.description}
+                          </P>
+                        </div>
+                      </div>{" "}
+                    </Motion>
                   ) : (
-                    <div key={index} className="flex items-center gap-4">
-                      <span className="p-2">
-                        <CheckCircle
-                          className="p-3 mx-auto size-14 text-[#a5a3ef] bg-[#e6e5ff] rounded-full"
-                          size={12}
-                        />
-                      </span>
-                      <div>
-                        <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
-                          {feature.title}
-                        </H2>
-                        <P className="text-gray-500 tracking-wide leading-1 ">
-                          {feature.description}
-                        </P>
+                    <Motion direction="right">
+                      <div key={index} className="flex items-center gap-4">
+                        <span className="p-2">
+                          <CheckCircle
+                            className="p-3 mx-auto size-14 text-[#a5a3ef] bg-[#e6e5ff] rounded-full"
+                            size={12}
+                          />
+                        </span>
+                        <div>
+                          <H2 className="text-base md:text-lg lg:text-xl border-none font-semibold">
+                            {feature.title}
+                          </H2>
+                          <P className="text-gray-500 tracking-wide leading-1 ">
+                            {feature.description}
+                          </P>
+                        </div>
                       </div>
-                    </div>
+                    </Motion>
                   )
                 )}
               </div>
@@ -267,7 +271,7 @@ const Home = () => {
           </div>
         </MaxWidthWrapper>
       </MaxWidthWrapper>
-      {/* 
+
       <MaxWidthWrapper className="max-w-full w-full   py-4  bg-[url('../assets/placeholder.png')] bg-no-repeat bg-cover  bg-blend-multiply  h-[2600px] sm:h-[1550px] md:h-[1400px]  lg:h-[1000px] bg-[#1e193bfb] ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
@@ -767,7 +771,7 @@ const Home = () => {
             />
           </div>
         </MaxWidthWrapper>
-      </MaxWidthWrapper> */}
+      </MaxWidthWrapper>
     </>
   );
 };
