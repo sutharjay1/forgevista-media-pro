@@ -423,8 +423,8 @@ const Home = () => {
                           item.enterprise
                             ? "rounded-5xl bg-[#eeedfe] p-6 py-14 sm:py-28 sm:px-8 lg:p-12 z-20"
                             : item.plan === "Personal Plan"
-                            ? "rounded-5xl md:rounded-l-5xl  p-6 sm:px-8 lg:p-12 shadow-2xl"
-                            : "rounded-5xl md:rounded-r-5xl p-6 sm:px-8 lg:p-12 shadow-2xl"
+                            ? "rounded-5xl md:rounded-l-5xl  p-6 sm:px-8 lg:p-12 lg:shadow-2xl"
+                            : "rounded-5xl md:rounded-r-5xl p-6 sm:px-8 lg:p-12 lg:shadow-2xl"
                         }
                         key={index}
                       >
