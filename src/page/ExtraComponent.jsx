@@ -3,13 +3,12 @@ import MaxWidthWrapper from "../components/MaxWidthWrapper";
 import EFooter from "../extraComponent/EFooter";
 import { H3 } from "../components/typographyh3";
 import Button from "../components/Button";
+import EAccordian from "../extraComponent/EAccordian";
 
 const ExtraComponent = () => {
   const components = [
-    { title: "EFooter 1", component: EFooter },
-    { title: "EFooter 2", component: EFooter },
-    { title: "EFooter 3", component: EFooter },
-    { title: "EFooter 4", component: EFooter },
+    { title: "EFooter", component: EFooter },
+    { title: "EAccordian", component: EAccordian },
   ];
 
   const [showStates, setShowStates] = useState(components.map(() => false));

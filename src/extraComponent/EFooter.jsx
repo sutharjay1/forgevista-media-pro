@@ -261,7 +261,7 @@ const EFooter = ({ className }) => {
           "mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
         )}
       >
-        <div className="flex items-center justify-between gap-4 -mb-8">
+        <div className="flex items-center justify-between gap-4 -mb-4 lg:-mb-8">
           <H1 className="text-zinc-200 text-lg font-semibold">jobify</H1>
           <div className="flex space-x-4">
             {[ImLinkedin2, FaFacebookF, IoLogoTwitter, IoLogoYoutube].map(
@@ -271,13 +271,13 @@ const EFooter = ({ className }) => {
                   to="#"
                   className="text-zinc-100 bg-[#367978] p-2 rounded-lg hover:bg-[#28214c] transition-colors duration-200"
                 >
-                  <Icon size={24} />
+                  <Icon className="size-4 lg:size-6" />
                 </Link>
               )
             )}
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 border-t border-gray-100 pt-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 border-t border-gray-100 pt-4 lg:pt-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="w-full">
             <h2 className="text-zinc-300 text-xl font-semibold mb-4">
               Other Pages
@@ -333,7 +333,7 @@ const EFooter = ({ className }) => {
                 </button>
               </form>
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col lg:flex-row items-start justify-center gap-4">
               <div className="flex flex-col items-start justify-start space-y-2 text-left text-zinc-300">
                 <H4>Call Us</H4>
                 <P>+91 1234567890</P>
