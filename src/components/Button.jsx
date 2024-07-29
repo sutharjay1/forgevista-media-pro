@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 const Button = ({
   children,
   className,
+  type,
   px,
   icon,
   bg,
@@ -41,7 +42,7 @@ const Button = ({
   );
 
   const content = (
-    <button className={classes} onClick={onClick}>
+    <button type={type} className={classes} onClick={onClick}>
       {children}
       {icon && <span className="ml-2">{icon}</span>}
     </button>

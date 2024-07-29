@@ -5,12 +5,14 @@ import { H3 } from "../components/typographyh3";
 import Button from "../components/Button";
 import EAccordian from "../extraComponent/EAccordian";
 import EJobifyLandingPage from "../extraComponent/EJobifyLandingPage";
+import EContactForm from "../extraComponent/EContactForm";
 
 const ExtraComponent = () => {
   const components = [
     { title: "Footer", component: EFooter },
     { title: "Hero - Accordian", component: EAccordian },
     { title: "Jobify Landing Page", component: EJobifyLandingPage },
+    { title: "Contact Form", component: EContactForm },
   ];
 
   const [showStates, setShowStates] = useState(components.map(() => false));
