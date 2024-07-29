@@ -106,52 +106,7 @@ const EUI = () => {
           </Accordion>
         </div>
 
-        {/* <div className="flex items-center justify-center lg:col-span-1">
-          <img
-            src="/path/to/your/image.jpg"
-            alt="Descriptive alt text"
-            width={400}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-        <div className="w-full lg:col-span-1">
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Talent acquisition</AccordionTrigger>
-              <AccordionContent>
-                Ad enim sint quis occaecat non sit sunt non sint ullamco ut
-                adipisicing minim. Id pariatur deserunt velit incididunt ullamco
-                ex eiusmod qui ea minim enim. Eu et nisi dolor elit velit
-                consectetur ad aute.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>People and culture</AccordionTrigger>
-              <AccordionContent>
-                Nostrud aliquip non sint qui magna duis labore. Veniam est dolor
-                ipsum fugiat mollit voluptate aliquip minim sint eu consectetur
-                magna velit minim. Pariatur tempor excepteur nisi aliquip esse
-                labore labore enim. Excepteur occaecat fugiat est adipisicing
-                incididunt veniam eiusmod Lorem nulla. Laboris ea irure veniam
-                incididunt esse. Qui consequat sint non voluptate mollit ad sint
-                non veniam ea minim nisi ullamco reprehenderit.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Efficient recruitment</AccordionTrigger>
-              <AccordionContent>
-                Adipisicing cupidatat laboris ea ad cupidatat aute proident
-                ipsum deserunt minim culpa. Occaecat aliqua anim consectetur
-                magna labore mollit do laborum aute cillum. Quis ut aliquip sunt
-                nulla velit qui. Mollit incididunt qui reprehenderit magna esse
-                nulla ad commodo duis dolor anim occaecat aliquip consectetur.
-                Magna adipisicing cillum do exercitation sit sint adipisicing
-                consectetur non consequat ullamco anim excepteur.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div> */}
+
       </div>
     </MaxWidthWrapper>
   );
