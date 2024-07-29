@@ -8,7 +8,7 @@ import { IoLogoCodepen, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 const EJim = () => {
   return (
-    <main className="relative">
+    <main className="relative overflow-auto">
       <div className="absolute top-1/2 left-40  transform -translate-y-1/2  grid grid-rows-3 gap-1">
         <span className="p-2 rounded-full">
           <IoLogoCodepen className="text-[#6f5fdc] size-6 " />

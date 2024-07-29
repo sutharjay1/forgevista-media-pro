@@ -201,7 +201,7 @@ export default function EJobifyLandingPage() {
   return (
     <>
       <Navbar />
-      <MaxWidthWrapper className="px-2 sm:px-4 md:px-0  py-10 ">
+      <MaxWidthWrapper className="px-2 sm:px-4 md:px-0 overflow-auto  py-10 ">
         <div className="grid grid-cols-1 lg:grid-cols-2  lg:gap-8 place-items-center space-y-6">
           <div className="flex flex-col space-y-6 sm:space-y-10 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto">
             <Motion direction="left">

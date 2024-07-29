@@ -89,11 +89,12 @@ const GrowComponentHeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center aspect-square lg:h-[35rem] relative">
+          <div className="flex items-center justify-center aspect-square lg:h-[35rem] relative py-14">
             {" "}
             <Motion direction="right" className="relative ml-24">
-              <div className="absolute inset-0 -left-32 -top-8 w-full lg:w-[24rem] h-[35rem] bg-[#908ce1] mx-auto rounded-3xl z-0 -rotate-[15deg]" />
-              <div className="relative w-full lg:w-[24rem] h-[35rem] mx-auto rounded-3xl overflow-clip z-40">
+              <div className="absolute inset-0 -left-24 lg:-left-32 -top-2 lg:-top-8 w-full lg:w-[24rem] h-auto lg:h-[35rem]  bg-[#908ce1] mx-auto rounded-3xl z-0 -rotate-[12deg] lg:-rotate-[15deg]" />
+
+              <div className="relative w-full lg:w-[24rem] h-auto lg:h-[35rem] mx-auto rounded-3xl overflow-clip z-40">
                 <img
                   src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="building plan image"

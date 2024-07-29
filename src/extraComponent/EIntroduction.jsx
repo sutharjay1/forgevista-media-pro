@@ -8,7 +8,7 @@ import { H3 } from "../components/typographyh3";
 
 const EIntroduction = () => {
   return (
-    <MaxWidthWrapper className="py-10">
+    <MaxWidthWrapper className="py-10 overflow-auto">
       <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-2">
         <div className="flex items-center justify-center aspect-square lg:h-[35rem] relative">
           <Motion direction="left">
