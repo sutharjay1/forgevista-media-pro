@@ -6,7 +6,7 @@ import {
   IoLogoInstagram,
   IoLogoTiktok,
   IoLogoTwitter,
-  IoLogoYoutube
+  IoLogoYoutube,
 } from "react-icons/io5";
 import { PiPresentationChart } from "react-icons/pi";
 import { ChartIcon } from "./ChartIcon";
@@ -16,21 +16,13 @@ import { H3 } from "./typographyh3";
 import { P } from "./typographypara";
 
 const Ripple = React.memo(function Ripple({
+  ripple,
   sectionOne,
   sectionTwo,
   mainCircleSize = 210,
   mainCircleOpacity = 0.24,
   numCircles = 8,
-  colors = [
-    "#ff0000",
-    "#00ff00",
-    "#0000ff",
-    "#ffff00",
-    "#ff00ff",
-    "#00ffff",
-    "#ffffff",
-    "#000000",
-  ],
+  colors = [],
   children,
 }) {
   return (
