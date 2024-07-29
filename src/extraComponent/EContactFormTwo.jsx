@@ -6,10 +6,11 @@ import { Motion } from "./Motion";
 import { H3 } from "./typographyh3";
 import { H4 } from "./typographyh4";
 import { P } from "./typographypara";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const EContactFormTwo = () => {
   return (
-    <section className="bg-[#222631] py-16">
+    <MaxWidthWrapper className="bg-[#222631] py-16 px-0 overflow-auto">
       <div className="mx-auto max-w-screen-xl p-8 sm:px-6 lg:px-8 lg:pr-32 bg-[#292d39] rounded-xl border-[1.6px] border-zinc-300/10">
         <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-5">
           <div className="rounded-lg p-4 lg:col-span-3 lg:p-12">
@@ -147,7 +148,7 @@ const EContactFormTwo = () => {
           </div>
         </div>
       </div>
-    </section>
+    </MaxWidthWrapper>
   );
 };
 

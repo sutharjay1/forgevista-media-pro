@@ -6,10 +6,11 @@ import { P } from "./typographypara";
 import { BsBuildings } from "react-icons/bs";
 import { H4 } from "./typographyh4";
 import { MapPin } from "lucide-react";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const EContactForm = () => {
   return (
-    <section className="bg-zinc-200/80">
+    <MaxWidthWrapper className="bg-zinc-200/80 py-10 px-0 overflow-auto">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="rounded-lg  p-2 lg:col-span-3  lg:p-12">
@@ -126,7 +127,7 @@ const EContactForm = () => {
           </div>
         </div>
       </div>
-    </section>
+    </MaxWidthWrapper>
   );
 };
 
