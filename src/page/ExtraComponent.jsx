@@ -28,12 +28,12 @@ const ExtraComponent = () => {
   return (
     <>
       <MaxWidthWrapper className="py-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {components.map((component, index) => (
             <Button
               key={index}
               onClick={() => toggleShow(index)}
-              className="bg-[#e77e38] hover:bg-[#ff6400] transition-colors duration-200"
+              className="bg-[#e77e38] hover:bg-[#ff6400] transition-colors duration-200 w-full"
             >
               {component.title}
             </Button>
