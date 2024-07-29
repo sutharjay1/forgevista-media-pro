@@ -292,7 +292,7 @@ const Home = () => {
             </div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-4 gap-y-4 pt-12">
               <Motion direction="left">
-                <div className="w-full relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 min-h-[21.25rem]">
+                <div className="w-full relative group flex flex-col bg-white rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 min-h-[21.25rem]">
                   <img
                     src="./assets/likes-in-social-media.jpg"
                     className="w-[27rem] h-[23.25rem] object-cover object-center"
