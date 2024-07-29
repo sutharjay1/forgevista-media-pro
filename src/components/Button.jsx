@@ -13,6 +13,7 @@ const Button = ({
   href,
   containerWidth,
   onClick,
+  variant,
 }) => {
   const baseClasses =
     "flex items-center justify-center gap-2 text-center font-semibold py-3 px-6 rounded-xl transition-colors duration-300";
@@ -22,6 +23,11 @@ const Button = ({
     border:
       "border border-[#ff6400] text-[#ff6400] hover:bg-[#ff6400] hover:text-zinc-50",
     text: "text-[#ff6400] hover:underline",
+    outline:
+      "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+    ghost: "hover:bg-accent hover:text-accent-foreground",
+    link: "text-primary underline-offset-4 hover:underline",
   };
 
   const classes = twMerge(
@@ -29,6 +35,7 @@ const Button = ({
     bg && variantClasses.bg,
     border && variantClasses.border,
     text && variantClasses.text,
+    variant && variantClasses[variant],
     containerWidth ? "w-full" : "w-fit",
     className
   );

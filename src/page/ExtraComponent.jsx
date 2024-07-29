@@ -4,11 +4,13 @@ import EFooter from "../extraComponent/EFooter";
 import { H3 } from "../components/typographyh3";
 import Button from "../components/Button";
 import EAccordian from "../extraComponent/EAccordian";
+import EJobifyLandingPage from "../extraComponent/EJobifyLandingPage";
 
 const ExtraComponent = () => {
   const components = [
-    { title: "EFooter", component: EFooter },
-    { title: "EAccordian", component: EAccordian },
+    { title: "Footer", component: EFooter },
+    { title: "Hero - Accordian", component: EAccordian },
+    { title: "Jobify Landing Page", component: EJobifyLandingPage },
   ];
 
   const [showStates, setShowStates] = useState(components.map(() => false));
