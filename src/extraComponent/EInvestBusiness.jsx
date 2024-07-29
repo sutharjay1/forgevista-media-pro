@@ -1,17 +1,14 @@
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { H4 } from "../components/typographyh4";
-import { P } from "../components/typographypara";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { Motion } from "../components/Motion";
-import { H3 } from "../components/typographyh3";
-import Button from "../components/Button";
-import { H2 } from "../components/typographyh2";
-import { Check, CheckCircle } from "lucide-react";
-import { GrLineChart } from "react-icons/gr";
-import { GiTakeMyMoney } from "react-icons/gi";
-import { PiPresentationChart } from "react-icons/pi";
-import { IoSettingsOutline } from "react-icons/io5";
 import { FaHouse } from "react-icons/fa6";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
+import { PiPresentationChart } from "react-icons/pi";
+import Button from "./Button";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Motion } from "./Motion";
+import { H2 } from "./typographyh2";
+import { H3 } from "./typographyh3";
+import { P } from "./typographypara";
 
 const EInvestBusiness = () => {
   return (

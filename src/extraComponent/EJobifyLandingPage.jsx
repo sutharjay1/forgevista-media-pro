@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
 import { CgMenuGridO } from "react-icons/cg";
 import { Link, useLocation } from "react-router-dom";
-import Button from "../components/Button";
+import { Motion } from "./Motion";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import Button from "./Button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "../components/Sheet";
-import { H3 } from "../components/typographyh3";
-import { colorTheme } from "./../constants/colorTheme";
-import { Motion } from "../components/Motion";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
+} from "./Sheet";
+import { H3 } from "./typographyh3";
+import { colorTheme } from "./colorTheme.js";
 
 const Navbar = () => {
   const location = useLocation();

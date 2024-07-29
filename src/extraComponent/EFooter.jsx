@@ -4,9 +4,9 @@ import { ImLinkedin2 } from "react-icons/im";
 import { IoLogoTwitter, IoLogoYoutube } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { H1 } from "../components/typographyh1";
-import { H4 } from "../components/typographyh4";
-import { P } from "../components/typographypara";
+import { H1 } from "./typographyh1";
+import { H4 } from "./typographyh4";
+import { P } from "./typographypara";
 
 const EFooter = ({ className }) => {
   const currentYear = new Date().getFullYear();

@@ -1,10 +1,10 @@
 import React from "react";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { H4 } from "../components/typographyh4";
-import { P } from "../components/typographypara";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { H4 } from "./typographyh4";
+import { P } from "./typographypara";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { Motion } from "../components/Motion";
-import { H3 } from "../components/typographyh3";
+import { Motion } from "./Motion";
+import { H3 } from "./typographyh3";
 
 const EIntroduction = () => {
   return (

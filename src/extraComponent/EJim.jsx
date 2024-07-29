@@ -1,8 +1,8 @@
 import React from "react";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { Motion } from "../components/Motion";
-import Button from "../components/Button";
-import { P } from "../components/typographypara";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Motion } from "./Motion";
+import Button from "./Button";
+import { P } from "./typographypara";
 import { ChevronRight } from "lucide-react";
 import { IoLogoCodepen, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 

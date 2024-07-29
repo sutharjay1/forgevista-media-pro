@@ -3,12 +3,12 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../components/Accordion";
+} from "./Accordion";
 import React from "react";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { Motion } from "../components/Motion";
-import { H2 } from "../components/typographyh2";
-import { P } from "../components/typographypara";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Motion } from "./Motion";
+import { H2 } from "./typographyh2";
+import { P } from "./typographypara";
 
 const EAccordian = () => {
   return (

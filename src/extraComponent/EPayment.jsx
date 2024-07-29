@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../components/Button";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { Motion } from "../components/Motion";
+import Button from "./Button";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Motion } from "./Motion";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { P } from "../components/typographypara";
-import { H2 } from "../components/typographyh2";
+import { P } from "./typographypara";
+import { H2 } from "./typographyh2";
 
 const EPayment = () => {
   return (

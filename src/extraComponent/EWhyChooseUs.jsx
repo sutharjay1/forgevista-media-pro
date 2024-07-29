@@ -1,12 +1,10 @@
 import React from "react";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { H4 } from "../components/typographyh4";
-import { P } from "../components/typographypara";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { Motion } from "../components/Motion";
-import { H3 } from "../components/typographyh3";
 import { PiChartBar, PiUserCircleCheckLight } from "react-icons/pi";
-import { H2 } from "../components/typographyh2";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Motion } from "./Motion";
+import { H2 } from "./typographyh2";
+import { H3 } from "./typographyh3";
+import { P } from "./typographypara";
 
 const EWhyChooseUs = () => {
   return (

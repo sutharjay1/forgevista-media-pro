@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../components/Button";
-import { Motion } from "../components/Motion";
-import { H3 } from "../components/typographyh3";
-import { P } from "../components/typographypara";
+import Button from "./Button";
+import { Motion } from "./Motion";
+import { H3 } from "./typographyh3";
+import { P } from "./typographypara";
 import { BsBuildings } from "react-icons/bs";
-import { H4 } from "../components/typographyh4";
+import { H4 } from "./typographyh4";
 import { MapPin } from "lucide-react";
 
 const EContactForm = () => {

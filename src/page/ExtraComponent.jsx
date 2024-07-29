@@ -11,6 +11,8 @@ import EWhyChooseUs from "../extraComponent/EWhyChooseUs";
 import GrowComponentHeroSection from "../extraComponent/GrowComponentHeroSection";
 import EFooterTwo from "../extraComponent/EFooterTwo";
 import EPayment from "../extraComponent/EPayment";
+import EUI from "../extraComponent/EUI";
+import EBigIdea from "../extraComponent/EBigIdea";
 
 const ExtraComponent = () => {
   return (
@@ -21,12 +23,14 @@ const ExtraComponent = () => {
       <EIntroduction />
       <EPayment />
       <EJim />
+      <EUI />
       <GrowComponentHeroSection />
       <EInvestBusiness />
       <EContactForm />
       <EContactFormTwo />
       <EFooter />
       <EFooterTwo />
+      <EBigIdea />
     </>
   );
 };

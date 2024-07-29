@@ -1,13 +1,13 @@
 import { PlayIcon, Star } from "lucide-react";
 import React from "react";
 import { GrLineChart } from "react-icons/gr";
-import AvatarCircles from "../components/Avatar";
-import Button from "../components/Button";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { Motion } from "../components/Motion";
-import { H3 } from "../components/typographyh3";
-import { P } from "../components/typographypara";
-import Loader from "../components/Loader";
+import AvatarCircles from "./Avatar";
+import Button from "./Button";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Motion } from "./Motion";
+import { H3 } from "./typographyh3";
+import { P } from "./typographypara";
+import Loader from "./Loader";
 
 const GrowComponentHeroSection = () => {
   return (

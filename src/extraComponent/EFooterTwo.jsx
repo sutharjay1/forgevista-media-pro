@@ -1,15 +1,11 @@
 import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { ImLinkedin2 } from "react-icons/im";
-import { IoLogoTwitter, IoLogoYoutube } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import { twMerge } from "tailwind-merge";
-import { H1 } from "../components/typographyh1";
-import { H4 } from "../components/typographyh4";
-import { P } from "../components/typographypara";
 import { IoLogoInstagram } from "react-icons/io";
-import { H2 } from "../components/typographyh2";
-import { H3 } from "../components/typographyh3";
+import { IoLogoTwitter } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { H1 } from "./typographyh1";
+import { H3 } from "./typographyh3";
 
 const EFooterTwo = ({ className }) => {
   const currentYear = new Date().getFullYear();

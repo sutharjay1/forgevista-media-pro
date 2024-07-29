@@ -4,14 +4,14 @@ import { CgMenuGridO } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { colorTheme } from "./../constants/colorTheme";
-import Button from "./Button";
+import Button from "../components/Button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./Sheet";
+} from "../components/Sheet";
 
 const Header = () => {
   const location = useLocation();
