@@ -86,7 +86,7 @@ const Home = () => {
       <MaxWidthWrapper className="pt-10 ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 place-items-center">
-            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left space-y-5">
               <Motion direction="left">
                 <Badge className="inline-block uppercase tracking-wide">
                   Welcome To Socialzy
