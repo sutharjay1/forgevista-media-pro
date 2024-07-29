@@ -116,45 +116,13 @@ body {
   src: url('./assets/font/PolySans-Neutral.woff2') format("woff2");
 }
 
-/* 
-.placeholderImage {
-  background-image: url('../assets/placeholder.png');
-  background-repeat: no-repeat;
+
+
+.blobImage {
+  width: 100%;
+  height: 100%;
   background-size: cover;
-  object-fit: cover;
-  height: 900px;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M626.5 707.5Q260 915 263 505t366.5-207.5q363.5 202.5-3 410Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%236f5fdc%22 d=%22M626.5 707.5Q260 915 263 505t366.5-207.5q363.5 202.5-3 410Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
-
-
-.bgImage {
-  background-image: url('../assets/bg-footer.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 750px;
-}
-
-
-
-
-
-@media screen and (max-width: 1024px) {
-  .placeholderImage {
-    height: 1250px;
-  }
-
-  .bgImage {
-    height: 500px;
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-  .placeholderImage {
-    height: 2325px;
-  }
-
-  .bgImage {
-    height: 500px;
-  }
-} */

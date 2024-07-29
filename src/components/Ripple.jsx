@@ -161,7 +161,7 @@ const Ripple = React.memo(function Ripple({
           </Motion>
           <Motion
             direction="left"
-            className="absolute top-32 lg:top-28 -left-32 z-50 hidden sm:block backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
+            className="absolute top-32 lg:top-28 -left-28 z-50 hidden sm:block backdrop-blur-xl bg-zinc-200/30  rounded-full   max-w-96"
           >
             <div className="  flex items-center justify-center px-2 py-2  ">
               <span className="p-2">
