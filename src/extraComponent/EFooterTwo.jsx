@@ -16,8 +16,8 @@ const EFooterTwo = ({ className }) => {
 
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-8 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-6 py-16 sm:px-6 lg:space-y-8 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-3">
           <div>
             <H1 className="text-zinc-800 text-lg font-semibold">HirePro</H1>
 
@@ -105,15 +105,15 @@ const EFooterTwo = ({ className }) => {
         </div>
 
         <div className="border-t border-gray-300 pt-4 lg:pt-8 ">
-          <div className="space-y-8 flex items-center justify-between">
-            <div className="flex items-center justify-center gap-x-8">
+          <div className="space-y-8 flex flex-col lg:flex-row items-center justify-between">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-center gap-x-8">
               <span className="max-w-sm">
                 {" "}
                 <H3 className="text-[#171b4f] text-balance">
                   Find your next great opportunity!
                 </H3>
               </span>
-              <form className="relative max-w-lg">
+              <form className="relative w-full lg:max-w-lg">
                 <input
                   className="w-full rounded-xl border-[1px] border-gray-300 bg-gray-100 p-4 pr-32 text-sm"
                   type="email"
@@ -127,7 +127,7 @@ const EFooterTwo = ({ className }) => {
                 </button>
               </form>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 items-center ">
               {[FaFacebookF, IoLogoTwitter, IoLogoInstagram, ImLinkedin2].map(
                 (Icon, index) => (
                   <Link
