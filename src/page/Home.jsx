@@ -306,7 +306,7 @@ const Home = () => {
                   <Motion direction="left">
                     <div
                       key={index}
-                      className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
+                      className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white  rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
                         index % 2 === 0 ? "col-span-1" : ""
                       } `}
                     >
@@ -350,7 +350,7 @@ const Home = () => {
                   <Motion direction="right">
                     <div
                       key={index}
-                      className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
+                      className={`w-full min-h-[21.25rem] max-w-md relative group flex flex-col bg-white  rounded-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
                         index % 2 === 0 ? "col-span-1" : ""
                       } `}
                     >
@@ -728,7 +728,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-12  lg:pt-8 pb-8">
+      <MaxWidthWrapper className="max-w-full w-full mx-auto pt-12  lg:pt-8 -mb-6 lg:-mb-0">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
