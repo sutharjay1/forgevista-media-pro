@@ -120,11 +120,7 @@ const Navbar = () => {
             <SheetTitle>
               {" "}
               <Link to={"/"} onClick={() => setIsOpen(false)}>
-                <img
-                  src="../assets/Logo.png"
-                  className="mx-auto h-6 w-auto object-cover"
-                  alt="mediaPro"
-                />
+                <H3>jobify</H3>
               </Link>
             </SheetTitle>
           </SheetHeader>
