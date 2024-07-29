@@ -42,7 +42,7 @@ const EJim = () => {
                 consequat.
               </p>
             </Motion>
-            <div className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full">
+            <div className="flex  items-center justify-start gap-4 lg:w-full">
               <Motion direction="left">
                 <Button
                   bg
@@ -54,7 +54,7 @@ const EJim = () => {
                 </Button>
               </Motion>
             </div>
-            <div className="lg:absolute lg:bottom-20  flex items-center  justify-center lg:justify-start gap-2 ">
+            <div className="lg:absolute lg:bottom-20  flex items-center  justify-start gap-2 ">
               <Mouse className="size-6" />
               Scroll down <IoIosArrowRoundDown className="size-5" />
             </div>
