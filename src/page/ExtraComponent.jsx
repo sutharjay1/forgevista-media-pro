@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import EAccordian from "../extraComponent/EAccordian";
 import EJobifyLandingPage from "../extraComponent/EJobifyLandingPage";
 import EContactForm from "../extraComponent/EContactForm";
+import EIntroduction from "../extraComponent/EIntroduction";
 
 const ExtraComponent = () => {
   const components = [
@@ -53,6 +54,7 @@ const ExtraComponent = () => {
       <EJobifyLandingPage />
       <EAccordian />
       <EContactForm />
+      <EIntroduction />
       <EFooter />
     </>
   );
