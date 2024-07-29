@@ -83,7 +83,7 @@ const Home = () => {
 
   return (
     <>
-      <MaxWidthWrapper className="pt-10">
+      <MaxWidthWrapper className="pt-10 ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 place-items-center">
             <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
@@ -171,7 +171,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="pt-[5rem] pb-6">
+      <MaxWidthWrapper className="pt-[5rem] pb-6 ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="p-1 sm:p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0   place-items-center bg-[#28214c]  rounded-4xl lg:bg-transparent p-4 sm:p-8 lg:p-0">
@@ -189,7 +189,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="pt-5 ">
+      <MaxWidthWrapper className="pt-5  ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="grid grid-flow-dense items-center gap-x-12 gap-y-10 place-items-center lg:grid-cols-2 pb-8">
             <div className="h-full  w-full flex items-center justify-center">
@@ -272,7 +272,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full   py-4  bg-[url('../assets/placeholder.png')] bg-no-repeat bg-cover  bg-blend-multiply  h-[2600px] sm:h-[1550px] md:h-[1400px]  lg:h-[1000px] bg-[#1e193bfb] ">
+      <MaxWidthWrapper className="max-w-full overflow-auto   py-4  bg-[url('../assets/placeholder.png')] bg-no-repeat bg-cover  bg-blend-multiply  h-[2600px] sm:h-[1550px] md:h-[1400px]  lg:h-[1000px] bg-[#1e193bfb] ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12  lg:grid-cols-2 ">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4 ">
@@ -394,7 +394,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full  py-4 pt-20 lg:pt-28 pb-8">
+      <MaxWidthWrapper className="max-w-full w-full  py-4  lg:pt-28 pb-8">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0">
           <div className="container w-full mx-auto gap-x-12 lg:grid-cols-2">
             <div className="w-full flex flex-col items-center justify-center mx-auto sm:text-center space-y-4">
@@ -478,7 +478,7 @@ const Home = () => {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="max-w-full w-full py-4 pt-10 lg:pt-6 h-[2200px] md:h-[1200px]  lg:h-[600px] bg-[#141025] pb-28 ">
+      <MaxWidthWrapper className="max-w-full  overflow-auto py-4 pt-10 lg:pt-6 h-[2200px] md:h-[1200px]  lg:h-[600px] bg-[#141025] ">
         <MaxWidthWrapper className="px-0 sm:px-0 md:px-0 flex items-center justify-center mx-auto">
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
