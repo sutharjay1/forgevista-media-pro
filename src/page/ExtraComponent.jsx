@@ -10,6 +10,7 @@ import EJobifyLandingPage from "../extraComponent/EJobifyLandingPage";
 import EWhyChooseUs from "../extraComponent/EWhyChooseUs";
 import GrowComponentHeroSection from "../extraComponent/GrowComponentHeroSection";
 import EFooterTwo from "../extraComponent/EFooterTwo";
+import EPayment from "../extraComponent/EPayment";
 
 const ExtraComponent = () => {
   return (
@@ -18,6 +19,7 @@ const ExtraComponent = () => {
       <EAccordian />
       <EWhyChooseUs />
       <EIntroduction />
+      <EPayment />
       <EJim />
       <GrowComponentHeroSection />
       <EInvestBusiness />
